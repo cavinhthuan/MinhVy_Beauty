@@ -1,0 +1,27 @@
+//font face
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//font
+$font-family: "Nunito", sans-serif !default;
+//size
+$extra-small: 12px;
+$small: 16px;
+$medium: 24px;
+$large: 32px;
+$extra-large: 64px;
+
+//weight
+$fw700: 700;
+$fw500: 500;
+$primary: #4ec4db;
+$secondary: #6fbd48;
+$white: #f1faf3;
+$secondary-lv2: #92ca90;
+$secondary-lv3: #accc7c;
+//box shadow
+$box_shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;

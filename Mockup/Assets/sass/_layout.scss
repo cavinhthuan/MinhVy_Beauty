@@ -1,0 +1,53 @@
+@import "_variables.scss";
+body {
+  background: linear-gradient(180deg, #bff5e1 0%, #93e2e1 10%);
+  height: 100%;
+}
+
+nav#header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 55px;
+  @media screen and (max-width: 768px) {
+    margin: 0px 11px;
+  }
+  align-items: center;
+  .logo img {
+    width: $extra-large;
+    height: $extra-large;
+    mix-blend-mode: multiply;
+  }
+  .cart {
+    position: relative;
+    a {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: $large;
+      height: $large;
+    }
+    &::before {
+      position: absolute;
+      content: "1";
+      width: $small;
+      height: $small;
+      background-color: $primary;
+      text-align: center;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      font-size: small;
+      font-weight: $fw500;
+      color: $white;
+    }
+  }
+}
+.container {
+  position: relative;
+  padding: 0px 55px;
+  @media screen and (max-width: 768px) {
+    padding: 0px 11px;
+  }
+  // height: 100%;
+}

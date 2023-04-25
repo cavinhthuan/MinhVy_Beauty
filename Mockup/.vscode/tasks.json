@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "css mapping",
+      "type": "shell",
+      "command": "sass --watch Assets/sass:Assets/css",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": true
+    },
+    {
+      "label": "Run LiveServer",
+      "type": "shell",
+      "command": "live-server",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "isBackground": true
+    },
+    {
+      "label": "auto start script",
+      "type": "shell",
+      "command": "echo \"building script!\" ${workspaceFolder}",
+      "dependsOn": ["css mapping", "Run LiveServer"],
+      "runOptions": {
+        // "runOn": "folderOpen"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
