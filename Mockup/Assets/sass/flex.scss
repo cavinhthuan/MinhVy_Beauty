@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+  &--col {
+    flex-direction: column;
+  }
+  &.md-v {
+    //middel vertical
+    align-items: center;
+  }
+  &.md-h {
+    //mid horizontal
+    justify-content: center;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  &.gap {
+    &-4 {
+      gap: 4px;
+    }
+    &-10 {
+      gap: 10px;
+    }
+    &-20 {
+      gap: 20px;
+    }
+  }
+}

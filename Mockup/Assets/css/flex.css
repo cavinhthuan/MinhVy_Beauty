@@ -1,0 +1,26 @@
+.flex {
+  display: flex;
+}
+.flex--col {
+  flex-direction: column;
+}
+.flex.md-v {
+  align-items: center;
+}
+.flex.md-h {
+  justify-content: center;
+}
+.flex .flex-1 {
+  flex: 1;
+}
+.flex.gap-4 {
+  gap: 4px;
+}
+.flex.gap-10 {
+  gap: 10px;
+}
+.flex.gap-20 {
+  gap: 20px;
+}
+
+/*# sourceMappingURL=flex.css.map */

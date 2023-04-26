@@ -1,0 +1,22 @@
+header {
+  .header {
+    display: flex;
+    padding: 0 15px;
+  }
+  background-color: $primary;
+  padding: 2px 0px;
+  font-family: $font-family;
+  color: $white;
+  font-size: $extra-small;
+  .cart {
+    margin: $extra-small 0;
+    i {
+      font-size: $small;
+      color: $white;
+    }
+    a {
+      @extend .text;
+      font-size: $extra-small;
+    }
+  }
+}
