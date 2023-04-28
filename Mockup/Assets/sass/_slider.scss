@@ -1,0 +1,136 @@
+$height: 600px;
+$btn-size: 35px;
+.slider {
+  width: 100%;
+  position: relative;
+  z-index: $layer-1;
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: $btn-size;
+    font-weight: 700;
+    color: $secondary;
+    cursor: pointer;
+    &--next {
+      @extend .btn;
+      right: -$btn-size;
+    }
+    &--back {
+      @extend .btn;
+      left: -$btn-size;
+    }
+  }
+
+  &:hover {
+    .btn {
+      &--next {
+        @extend .btn;
+        right: $btn-size;
+        animation: btn-slide--back ease 0.5s;
+        transition: 0.26s;
+      }
+      &--back {
+        @extend .btn;
+        left: $btn-size;
+        animation: btn-slide--next ease 0.5s;
+        transition: 0.26s;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    height: 145px;
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow-x: hidden;
+    z-index: $layer-3;
+
+    ul {
+      display: flex;
+    }
+    .item {
+      position: relative;
+      display: flex;
+      height: 145px;
+      // left: 50px;
+      img {
+        flex-grow: 1;
+        //   max-width: $height;
+        //   aspect-ratio: 1;
+        height: 145px;
+        object-fit: contain;
+        float: right;
+      }
+      .content {
+        flex-grow: 1;
+        padding: 0 11px;
+        font-family: $font-family;
+        display: block;
+        margin: auto 0;
+        font-size: 0.75em;
+      }
+    }
+    .btn {
+      &--next {
+        display: none;
+      }
+      &--back {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  }
+  @media only screen and (min-width: 1200px) {
+    height: $height;
+    background-color: $white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    overflow-x: hidden;
+    .item {
+      position: relative;
+      display: flex;
+      height: $height;
+      left: 50px;
+      img {
+        flex: 1;
+        //   max-width: $height;
+        //   aspect-ratio: 1;
+        object-fit: cover;
+        float: right;
+      }
+      .content {
+        flex: 1;
+        padding: 0 20px;
+        font-family: $font-family;
+        display: block;
+        margin: auto 0;
+        font-size: 40px;
+        //   position: absolute;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+@keyframes btn-slide--next {
+  0% {
+    left: -$btn-size;
+  }
+  100% {
+    left: $btn-size;
+  }
+}
+@keyframes btn-slide--back {
+  0% {
+    right: -$btn-size;
+  }
+  100% {
+    right: $btn-size;
+  }
+}

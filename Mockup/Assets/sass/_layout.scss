@@ -1,5 +1,7 @@
 @import "_variables.scss";
-
+header {
+  background-color: white;
+}
 .container {
   position: relative;
   padding: 0px 20px;
@@ -28,6 +30,12 @@
   font-family: $font-family;
   color: $white;
   text-decoration: none;
+  &:active {
+    color: inherit;
+  }
+  &:visited {
+    color: inherit;
+  }
   &--center {
     text-align: center;
   }
@@ -39,4 +47,17 @@ strong {
 
 .no-p {
   padding: 0;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }

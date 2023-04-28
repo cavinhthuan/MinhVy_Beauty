@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-    <link rel="stylesheet" href="./Assets/css/index.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
     <title>MinhVy Beauty</title>
+    <!-- lib -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- script -->
+    <script src="Assets/js/index.js"></script>
+    <!-- css -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
         type="text/css">
-
+    <link rel="stylesheet" href="./Assets/css/index.css">
+    <!-- import -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Abel&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,500;0,700;1,300&display=swap');
     </style>
@@ -23,38 +24,313 @@
 <body>
     <header class="container">
         <div class="header flex md-v">
-            <div class="text--center flex-1">
+            <div class="ham-menu">
+                <div class="navbar-container">
+                    <input type="checkbox" name="" id="ham-toggle">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="nav--mobile flex flex--col  md-h md-v ham-slide-close" id="nav-left">
+                        <div id="logo-nav">
+                            <img class="logo--large" src="Assets/image/Logo&Slogan MINHVYBEAUTY.png" alt="" srcset="">
+                        </div>
+                        <nav class="menu-items">
+                            <ul class="gap-20">
+                                <li><a class="text" href="#">GIỚI THIỆU</a></li>
+                                <li class="drop-down">
+                                    <a class="text" href="#">
+                                        <!-- <i class="fa-solid fa-caret-down"></i> -->
+                                        SẢN PHẨM
+                                    </a>
+                                    <ul class="drop-down--items">
+                                        <li class="drop-down"><a class="text" href="">THỰC PHẨM CHỨC NĂNG</a>
+                                            <ul class="drop-down--items">
+                                                <li>Dành cho người lớn tuổi</li>
+                                                <li>Dành cho Nữ</li>
+                                                <li>Dành cho Nam</li>
+                                                <li>Dành cho trẻ em</li>
+                                                <li>Dành cho người mang thai</li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop-down"><a class="text" href="">LÀM ĐẸP</a>
+                                            <ul class="drop-down--items">
+                                                <li>Mỹ phẩm</li>
+                                                <li>Nail</li>
+                                                <li>Mi</li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop-down"><a class="text" href="">GIA DỤNG</a>
+                                            <ul class="drop-down--items">
+                                                <li>Trang trí nội thất</li>
+                                                <li>Dụng cụ bếp</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="text" href="#">BLOG</a></li>
+                                <li><a class="text" href="#">PHƯƠNG THỨC THANH TOÁN</a></li>
+                                <li><a class="text" href="#">LIÊN HỆ</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <img src="Assets/image/Logo&Slogan MINHVYBEAUTY.png" alt="" class="mobile-logo">
+            <div class="message text--center ">
                 <p><strong>Sản phẩm tiêu dùng tốt cho sức khỏe</strong></p>
             </div>
-            <div>
+            <div class="act">
                 <div class="account"></div>
                 <div class="cart">
                     <a class="text" href="/Pages/#">
                         <i class="fa-solid fa-cart-shopping"></i>
-                        Cart 0
+                        <span class="cart-text">Cart </span>
+                        <span class="cart-count">0</span>
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <div class="container no-p">
-        <div class="nav flex flex--col  md-h md-v">
-            <div>
-                <img class="logo--large" src="Assets/image/logo.jpg" alt="" srcset="">
-            </div>
-            <nav>
-                <ul class="flex gap-20">
-                    <li><a class="text" href="/Pages/#">TRANG CHỦ</a></li>
-                    <li><a class="text" href="/Pages/#">GIỚI THIỆU</a></li>
-                    <li><a class="text" href="/Pages/#">SẢN PHẨM</a></li>
-                    <li><a class="text" href="/Pages/#">TIN TỨC</a></li>
-                    <li><a class="text" href="/Pages/#">LIÊN HỆ</a></li>
-                </ul>
-                <div class="drop-down">
-
-                </div>
-            </nav>
+    <div class="nav flex flex--col  md-h md-v ham-slide-close" id="nav-left">
+        <div id="logo-nav">
+            <img class="logo--large" src="Assets/image/Logo&Slogan MINHVYBEAUTY.png" alt="" srcset="">
         </div>
+        <nav class="menu-items">
+            <ul class="gap-20 catalogs">
+                <li><a class="text" href="#">GIỚI THIỆU</a></li>
+                <li class="text drop-down">
+                    <a class="text" href="#">
+                        <!-- <i class="fa-solid fa-caret-down"></i> -->
+                        SẢN PHẨM
+                    </a>
+                    <ul class="drop-down--items">
+                        <li><a class="text" href="#">THỰC PHẨM CHỨC NĂNG</a>
+                            <ul>
+                                <li><a href="#" class="text">Dành cho người lớn tuổi</a></li>
+                                <li><a href="#" class="text">Dành cho Nữ</a></li>
+                                <li><a href="#" class="text">Dành cho Nam</a></li>
+                                <li><a href="#" class="text">Dành cho trẻ em</a></li>
+                                <li><a href="#" class="text">Dành cho người mang thai</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="text" href="#">LÀM ĐẸP</a>
+                            <ul>
+                                <li><a href="#" class="text">Mỹ phẩm</a></li>
+                                <li><a href="#" class="text">Nail</a></li>
+                                <li><a href="#" class="text">Mi</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="text" href="#">GIA DỤNG</a>
+                            <ul>
+                                <li><a href="#" class="text">Trang trí nội thất</a></li>
+                                <li><a href="#" class="text">Dụng cụ bếp</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="text" href="#">BLOG</a></li>
+                <li><a class="text" href="#">PHƯƠNG THỨC THANH TOÁN</a></li>
+                <li><a class="text" href="#">LIÊN HỆ</a></li>
+            </ul>
+            <div>
+
+            </div>
+        </nav>
+    </div>
+    <div class="container no-p">
+        <section>
+            <div class="slider">
+                <ul>
+                    <li class="item">
+                        <div class="content">
+                            <p>
+                                Chào mừng đến với cửa hàng nhập khẩu Úc <strong>MinhVy Beauty</strong> - nơi mang đến
+                                cho bạn
+                                những sản
+                                phẩm chất lượng cao với giá cả hợp lý nhất!
+                            </p>
+                        </div>
+                        <img src="Assets/image/logo.jpg" alt="" class="skeleton ">
+                    </li>
+                </ul>
+                <a class="text btn--next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a class="text btn--back">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            </div>
+        </section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maxime commodi unde rerum autem eos eligendi
+        eaque! Placeat, optio. Incidunt aut quidem doloremque, quam ratione ipsa harum dolore reiciendis dolorem.
     </div>
 </body>
 
