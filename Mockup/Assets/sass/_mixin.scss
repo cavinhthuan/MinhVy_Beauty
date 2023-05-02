@@ -1,0 +1,23 @@
+///screen size
+$mobile-width: 641px;
+$tablet-width: 1008px;
+
+@mixin media($name) {
+  @if map-has-key($breakpoints, $name) {
+    $value: map-get($breakpoints, $name);
+    $query: if(type-of($value) == "string", $value, inspect($value));
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+$breakpoints: (
+  "mobile": "only screen and (max-width: #{$mobile-width - 1})",
+  "tablet":
+    "only screen and (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1})",
+  "laptop": "only screen and (min-width: #{$tablet-width})",
+);

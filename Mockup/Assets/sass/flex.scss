@@ -12,7 +12,7 @@
     justify-content: center;
   }
   .flex-1 {
-    flex: 1;
+    flex: 1 0 calc(50% - 10px);
   }
   &.gap {
     &-4 {

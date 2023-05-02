@@ -1,31 +1,3 @@
-//font
-
-$font-family: "Be Vietnam Pro", sans-serif;
-//size
-$extra-small: 14px;
-$small: 16px;
-$medium: 24px;
-$large: 32px;
-$extra-large: 64px;
-//layer
-$layer-1: 1;
-$layer-2: 2;
-$layer-3: 3;
-$layer-4: 4;
-$layer-5: 5;
-$layer-6: 6;
-$layer-7: 7;
-//weight
-$fw700: 700;
-$fw500: 500;
-$primary: #0052a0;
-$primary-lv1: #0065c6;
-$primary-lv2: #0078ec;
-$primary-lv3: #005fff;
-
-$secondary: #00b113;
-$secondary-lv1: #00d717;
-$secondary-lv2: #00fd1b;
-$white: #f1faf3;
-//box shadow
-$box_shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+@forward "color";
+@forward "font";
+@forward "layer";

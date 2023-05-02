@@ -1,13 +1,16 @@
-var swiper = new Swiper(".blog-slider", {
-  spaceBetween: 30,
-  effect: "fade",
+import Swiper from "/node_modules/swiper/swiper-bundle.esm.browser.min.js";
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
   loop: true,
-  mousewheel: {
-    invert: false,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".btn--next",
+    prevEl: ".btn--prev",
   },
-  // autoHeight: true,
-  pagination: {
-    el: ".blog-slider__pagination",
-    clickable: true,
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: true,
   },
 });

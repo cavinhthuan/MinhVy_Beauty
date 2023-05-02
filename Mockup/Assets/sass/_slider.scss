@@ -1,118 +1,103 @@
+@use "variables" as *;
+@use "flex" as *;
+@use "_mixin.scss" as *;
 $height: 600px;
 $btn-size: 35px;
 .slider {
+  font-family: $font-family;
   width: 100%;
+  height: $height;
   position: relative;
   z-index: $layer-1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow-y: hidden;
   .btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: $btn-size;
-    font-weight: 700;
-    color: $secondary;
-    cursor: pointer;
-    &--next {
-      @extend .btn;
-      right: -$btn-size;
+    z-index: $layer-2;
+    color: $secondary !important;
+    text-shadow: $box_shadow;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+      color: $secondary-lv2 !important;
     }
-    &--back {
+    color: $black;
+    font-size: large;
+    &--next {
+      right: -$btn-size;
       @extend .btn;
+    }
+    &--prev {
       left: -$btn-size;
+      @extend .btn;
     }
   }
-
   &:hover {
     .btn {
       &--next {
-        @extend .btn;
         right: $btn-size;
-        animation: btn-slide--back ease 0.5s;
-        transition: 0.26s;
+        animation: btn-slide--next 0.25s ease;
       }
-      &--back {
-        @extend .btn;
+      &--prev {
         left: $btn-size;
-        animation: btn-slide--next ease 0.5s;
-        transition: 0.26s;
+        animation: btn-slide--back 0.25s ease;
       }
     }
   }
-
-  @media only screen and (max-width: 576px) {
-    height: 145px;
-    background-color: $white;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    overflow-x: hidden;
-    z-index: $layer-3;
-
-    ul {
-      display: flex;
+  &--item {
+    height: 100%;
+    padding: 0px calc($btn-size + 1em);
+    .content {
+      font-size: 2em;
     }
-    .item {
-      position: relative;
-      display: flex;
-      height: 145px;
-      // left: 50px;
+    .media {
       img {
-        flex-grow: 1;
-        //   max-width: $height;
-        //   aspect-ratio: 1;
-        height: 145px;
+        width: 100%;
         object-fit: contain;
-        float: right;
       }
-      .content {
-        flex-grow: 1;
-        padding: 0 11px;
-        font-family: $font-family;
-        display: block;
-        margin: auto 0;
-        font-size: 0.75em;
+      video {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 20px;
       }
     }
+  }
+  @include media(mobile) {
+    height: 30vh;
     .btn {
+      display: none;
       &--next {
-        display: none;
+        @extend .btn;
       }
-      &--back {
-        display: none;
+      &--prev {
+        @extend .btn;
       }
     }
-  }
-  @media only screen and (min-width: 576px) and (max-width: 768px) {
-  }
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
-  }
-  @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  }
-  @media only screen and (min-width: 1200px) {
-    height: $height;
-    background-color: $white;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    overflow-x: hidden;
-    .item {
-      position: relative;
-      display: flex;
-      height: $height;
-      left: 50px;
-      img {
-        flex: 1;
-        //   max-width: $height;
-        //   aspect-ratio: 1;
-        object-fit: cover;
-        float: right;
-      }
+    &--item {
+      height: 100%;
+      padding: 5px 10px;
+      flex-wrap: wrap-reverse;
       .content {
-        flex: 1;
-        padding: 0 20px;
-        font-family: $font-family;
-        display: block;
-        margin: auto 0;
-        font-size: 40px;
-        //   position: absolute;
-        //   top: 50%;
-        //   transform: translateY(-50%);
+        font-size: 1em;
+        flex-grow: 1;
+      }
+      .media {
+        flex-grow: 1;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 80%;
+          object-fit: contain;
+        }
+        video {
+          height: 80%;
+          object-fit: contain;
+          border-radius: 20px;
+        }
       }
     }
   }
@@ -120,17 +105,17 @@ $btn-size: 35px;
 
 @keyframes btn-slide--next {
   0% {
-    left: -$btn-size;
-  }
-  100% {
-    left: $btn-size;
-  }
-}
-@keyframes btn-slide--back {
-  0% {
     right: -$btn-size;
   }
   100% {
     right: $btn-size;
+  }
+}
+@keyframes btn-slide--back {
+  0% {
+    left: -$btn-size;
+  }
+  100% {
+    left: $btn-size;
   }
 }

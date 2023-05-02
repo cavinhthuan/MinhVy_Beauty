@@ -1,0 +1,22 @@
+@use "variables" as *;
+.text {
+  font-family: $font-family;
+  color: $white;
+  text-decoration: none;
+  &:active {
+    color: inherit;
+  }
+  &:visited {
+    color: inherit;
+  }
+  &--center {
+    text-align: center;
+  }
+}
+
+strong {
+  font-weight: bold;
+  &-32{
+    font-size: 32px;
+  }
+}
