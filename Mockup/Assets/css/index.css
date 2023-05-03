@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,500;0,700;1,300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,500;0,700;1,300&display=swap");
 *,
@@ -140,8 +141,8 @@ header {
   }
   header .header .ham-menu {
     position: relative;
-    width: 18px;
-    height: 13px;
+    width: 16.7989898732px;
+    height: 14px;
     order: 2;
     z-index: 6;
     cursor: pointer;
@@ -149,8 +150,8 @@ header {
   header .header .ham-menu .navbar-container input[type=checkbox] {
     position: absolute;
     display: block;
-    height: 13px;
-    width: 18px;
+    height: 14px;
+    width: 16.7989898732px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 80;
@@ -160,13 +161,13 @@ header {
     background: #fff;
   }
   header .header .ham-menu .navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(35deg);
+    transform: rotate(45deg);
   }
   header .header .ham-menu .navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
     transform: scaleY(0);
   }
   header .header .ham-menu .navbar-container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-35deg);
+    transform: rotate(-45deg);
   }
   header .header .ham-menu .navbar-container input[type=checkbox]:checked ~ .nav--mobile {
     display: block !important;
@@ -179,8 +180,8 @@ header {
     animation: slide-left 0.25s both;
   }
   header .header .ham-menu .navbar-container .hamburger-lines {
-    height: 13px;
-    width: 18px;
+    height: 14px;
+    width: 16.7989898732px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -193,7 +194,7 @@ header {
   header .header .ham-menu .navbar-container .hamburger-lines .line {
     display: block;
     height: 3px;
-    width: 100%;
+    width: 16.7989898732px;
     border-radius: 0px;
     background: #333;
     z-index: 6;
@@ -689,6 +690,7 @@ strong-32 {
     font-family: "Be Vietnam Pro", sans-serif;
     font-weight: 300;
     margin-top: 20px;
+    color: #283a8d;
   }
   .nav #logo-nav img {
     height: 60px;
@@ -711,12 +713,19 @@ strong-32 {
     color: #283a8d;
   }
 }
-.search-container {
+#search-bar {
+  position: relative;
   width: 100%;
+}
+#search-bar .search-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
-.search-container input#search-bar {
+#search-bar .search-container input#search-bar {
   margin: 0 auto;
   width: 100%;
   height: 45px;
@@ -726,30 +735,59 @@ strong-32 {
   border: 1px solid #d0cfce;
   outline: none;
 }
-.search-container input#search-bar:focus {
+#search-bar .search-container input#search-bar:focus {
   border: 1px solid #008abf;
   transition: 0.35s ease;
   color: #008abf;
 }
-.search-container input#search-bar:focus::-webkit-input-placeholder {
+#search-bar .search-container input#search-bar:focus::-webkit-input-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
-.search-container input#search-bar:focus::-moz-placeholder {
+#search-bar .search-container input#search-bar:focus::-moz-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
-.search-container input#search-bar:focus:-ms-placeholder {
+#search-bar .search-container input#search-bar:focus:-ms-placeholder {
   transition: opacity 0.45s ease;
   opacity: 0;
 }
-.search-icon {
-  position: relative;
+#search-bar .search-result {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 40px;
+  transform: translateY(100%);
+  z-index: 2;
+  background-color: #fff;
+}
+#search-bar .search-result-item {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+#search-bar .search-result-item:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+#search-bar .search-icon {
+  position: absolute;
+  font-size: 25px;
+  border: #f1f1f1 solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #283a8d;
   float: right;
   width: 75px;
   height: 75px;
-  top: -62px;
+  top: 50%;
   right: -10px;
+  transform: translateY(-50%);
 }
 
 .slider {
@@ -758,7 +796,7 @@ strong-32 {
   height: 600px;
   position: relative;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   overflow-y: hidden;
 }
 .slider .btn, .slider .btn--prev, .slider .btn--next {
@@ -897,6 +935,95 @@ strong-32 {
 .breaker h2 strong {
   margin: 0 2vw;
   font-weight: 300;
+}
+
+.group-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  justify-content: start;
+  align-items: center;
+  justify-items: center;
+  gap: 10px 20px;
+  padding: 0 20px;
+}
+.group-products .product {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 135px;
+}
+.group-products .product-image {
+  position: relative;
+}
+.group-products .product-image > img {
+  width: 100%;
+  object-fit: contain;
+}
+.group-products .product-image::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 3em;
+  right: 50%;
+  top: 35%;
+  transform: translate(50%);
+  border: 3px solid white;
+  border-radius: 5px;
+}
+.group-products .product-image::before {
+  content: "xem thêm";
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+}
+.group-products .product-image::after, .group-products .product-image::before {
+  display: none;
+}
+.group-products .product-image:hover::after, .group-products .product-image:hover::before {
+  display: flex;
+}
+.group-products .product-name {
+  text-align: center;
+  white-space: nowrap;
+  width: 135px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 2em;
+}
+.group-products .product .btn-addtocart {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */

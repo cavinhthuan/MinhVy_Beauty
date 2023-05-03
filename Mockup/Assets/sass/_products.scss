@@ -1,0 +1,96 @@
+$product-width: 135px;
+.group-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($product-width, 1fr));
+  justify-content: start;
+  align-items: center;
+  justify-items: center;
+  // justify-content: space-between;
+  gap: 10px 20px;
+  padding: 0 20px;
+  .product {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: $product-width;
+    &-image {
+      position: relative;
+      & > img {
+        width: 100%;
+        object-fit: contain;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 3em;
+        right: 50%;
+        top: 35%;
+        transform: translate(50%);
+        border: 3px solid white;
+        border-radius: 5px;
+      }
+      &::before {
+        content: "xem thêm";
+        color: white;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+      }
+      &::after,
+      &::before {
+        display: none;
+      }
+      &:hover {
+        &::after,
+        &::before {
+          display: flex;
+        }
+      }
+    }
+    &-name {
+      text-align: center;
+      white-space: nowrap;
+      width: $product-width;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 2em;
+    }
+    &-price {
+    }
+    .btn-addtocart {
+      background-color: #222;
+      border-radius: 4px;
+      border-style: none;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Farfetch Basis", "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin: 0;
+      max-width: none;
+      min-height: 44px;
+      min-width: 10px;
+      outline: none;
+      overflow: hidden;
+      padding: 9px 20px 8px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: 100%;
+    }
+  }
+}

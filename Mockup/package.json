@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@algolia/autocomplete-js": "^1.9.2",
+    "algoliasearch": "^4.17.0",
     "swiper": "^9.2.4"
   }
 }

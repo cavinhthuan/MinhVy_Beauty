@@ -98,13 +98,13 @@
       justify-content: space-around;
 
       & > li {
+        color: $primary !important;
         a {
           & + ul {
             color: black;
             font-weight: 300;
           }
         }
-        color: $primary !important;
       }
       &::before {
         content: "";

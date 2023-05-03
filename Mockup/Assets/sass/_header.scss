@@ -1,5 +1,6 @@
 @use "mixin" as *;
 @use "variables" as *;
+@use "sass:math";
 .sticky {
   position: fixed;
   top: 0;
@@ -15,8 +16,10 @@ header {
   background-color: white;
   @include media(mobile) {
     //variables
-    $ham-size-w: 18px;
-    $ham-size-h: 13px;
+    $ham-size-h: 14px;
+    $ham-line-height: 3px;
+    $ham-size-w: $ham-size-h * math.sqrt(2) - $ham-line-height;
+    $deg: 45deg;
     .header {
       display: flex;
       padding: 7px 15px;
@@ -49,13 +52,13 @@ header {
                   background: $white;
                 }
                 .line1 {
-                  transform: rotate(35deg);
+                  transform: rotate($deg);
                 }
                 .line2 {
                   transform: scaleY(0);
                 }
                 .line3 {
-                  transform: rotate(-35deg);
+                  transform: rotate(-$deg);
                 }
               }
               .nav--mobile {
@@ -85,8 +88,8 @@ header {
             z-index: $layer-6;
             .line {
               display: block;
-              height: 3px;
-              width: 100%;
+              height: $ham-line-height;
+              width: $ham-size-w;
               border-radius: 0px;
               background: #333;
               z-index: $layer-6;
