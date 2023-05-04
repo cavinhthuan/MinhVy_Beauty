@@ -1,502 +1,699 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <title>MinhVy Beauty</title>
     <!-- lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" />
+    <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css" />
     <!-- script -->
 
     <!-- css -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"
-        type="text/css">
-    <link rel="stylesheet" href="./Assets/css/index.css">
-</head>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./Assets/css/index.css" />
+  </head>
 
-<body>
+  <body>
     <header class="container">
-        <div class="header flex md-v">
-            <div class="ham-menu">
-                <div class="navbar-container">
-                    <input type="checkbox" name="" id="ham-toggle">
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>
-                    <div class="nav--mobile flex flex--col  md-h md-v ham-slide-close" id="nav-left">
-                        <div id="logo-nav">
-                            <img class="logo--large" src="Assets/image/Logo&Slogan MINHVYBEAUTY.png" alt="" srcset="">
-                        </div>
-                        <nav class="menu-items">
-                            <ul class="gap-20">
-                                <li><a class="text" href="#">GIỚI THIỆU</a></li>
-                                <li class="drop-down">
-                                    <a class="text" href="#sanpham">
-                                        SẢN PHẨM
-                                    </a>
-                                    <ul class="drop-down--items">
-                                        <li class="drop-down"><a class="text" href="#thucphamchucnang">THỰC PHẨM CHỨC
-                                                NĂNG</a>
-                                            <ul class="drop-down--items">
-                                                <li><a href="#danhchonguoilontuoi">Dành cho người lớn tuổi</a></li>
-                                                <li><a href="#danhchonu">Dành cho Nữ</a></li>
-                                                <li><a href="#danhchonam">Dành cho Nam</a></li>
-                                                <li><a href="#danhchotreem">Dành cho trẻ em</a></li>
-                                                <li><a href="#danhchonguoimangthai">Dành cho người mang thai</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop-down"><a class="text" href="#lamdep">LÀM ĐẸP</a>
-                                            <ul class="drop-down--items">
-                                                <li><a href="#mypham">Mỹ phẩm</a></li>
-                                                <li><a href="#nail">Nail</a></li>
-                                                <li><a href="#mi">Mi</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop-down"><a class="text" href="#giadung">GIA DỤNG</a>
-                                            <ul class="drop-down--items">
-                                                <li><a href="#trangtrinoithat">Trang trí nội thất</a></li>
-                                                <li><a href="#dungcubep">Dụng cụ bếp</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a class="text" href="#">BLOG</a></li>
-                                <li><a class="text" href="#">PHƯƠNG THỨC THANH TOÁN</a></li>
-                                <li><a class="text" href="#">LIÊN HỆ</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+      <div class="header flex md-v">
+        <div class="ham-menu">
+          <div class="navbar-container">
+            <input type="checkbox" name="" id="ham-toggle" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
             </div>
-            <img src="Assets/image/Logo&Slogan MINHVYBEAUTY.png" alt="" class="mobile-logo">
-            <div class="message text--center ">
-                <p><strong>MinhVy Beauty</strong> Uy tín hàng đầu, Chuyên sĩ lẻ hàng nội địa Úc</p>
+            <div
+              class="nav--mobile flex flex--col md-h md-v ham-slide-close"
+              id="nav-left"
+            >
+              <div id="logo-nav">
+                <img
+                  class="logo--large"
+                  src="Assets/image/Logo&Slogan MINHVYBEAUTY.png"
+                  alt=""
+                  srcset=""
+                />
+              </div>
+              <nav class="menu-items">
+                <ul class="gap-20">
+                  <li><a class="text" href="#">GIỚI THIỆU</a></li>
+                  <li class="drop-down">
+                    <a class="text" href="#sanpham"> SẢN PHẨM </a>
+                    <ul class="drop-down--items">
+                      <li class="drop-down">
+                        <a class="text" href="#thucphamchucnang"
+                          >THỰC PHẨM CHỨC NĂNG</a
+                        >
+                        <ul class="drop-down--items">
+                          <li>
+                            <a href="#danhchonguoilontuoi"
+                              >Dành cho người lớn tuổi</a
+                            >
+                          </li>
+                          <li><a href="#danhchonu">Dành cho Nữ</a></li>
+                          <li><a href="#danhchonam">Dành cho Nam</a></li>
+                          <li><a href="#danhchotreem">Dành cho trẻ em</a></li>
+                          <li>
+                            <a href="#danhchonguoimangthai"
+                              >Dành cho người mang thai</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="drop-down">
+                        <a class="text" href="#lamdep">LÀM ĐẸP</a>
+                        <ul class="drop-down--items">
+                          <li><a href="#mypham">Mỹ phẩm</a></li>
+                          <li><a href="#nail">Nail</a></li>
+                          <li><a href="#mi">Mi</a></li>
+                        </ul>
+                      </li>
+                      <li class="drop-down">
+                        <a class="text" href="#giadung">GIA DỤNG</a>
+                        <ul class="drop-down--items">
+                          <li>
+                            <a href="#trangtrinoithat">Trang trí nội thất</a>
+                          </li>
+                          <li><a href="#dungcubep">Dụng cụ bếp</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a class="text" href="#">BLOG</a></li>
+                  <li><a class="text" href="#">PHƯƠNG THỨC THANH TOÁN</a></li>
+                  <li><a class="text" href="#">LIÊN HỆ</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="act">
-                <div class="account"></div>
-                <div class="cart">
-                    <a class="text" href="/Pages/#">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="cart-text">Cart </span>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </div>
+          </div>
         </div>
+        <img
+          src="Assets/image/Logo&Slogan MINHVYBEAUTY.png"
+          alt=""
+          class="mobile-logo"
+        />
+        <div class="message text--center">
+          <p>
+            <strong>MinhVy Beauty</strong> Uy tín hàng đầu, Chuyên sĩ lẻ hàng
+            nội địa Úc
+          </p>
+        </div>
+        <div class="act">
+          <div class="account"></div>
+          <div class="cart">
+            <a class="text" href="/Pages/#">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-text">Cart </span>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
     <nav id="search-bar">
-        <form class="search-container">
-            <input type="text" id="search-bar" placeholder="What can I help you with today?">
-            <a href="#"><i class="fa-solid fa-magnifying-glass search-icon" style="color: #ffffff;"></i></a>
-        </form>
-        <div class="search-result">
-            <div class="search-result-item">
-                hello
+      <form class="search-container" id="search-box">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="What can I help you with today?"
+          autocomplete="off"
+        />
+        <a href="search" id="search-icon"
+          ><i
+            class="fa-solid fa-magnifying-glass search-icon"
+            style="color: #ffffff"
+          ></i
+        ></a>
+      </form>
+      <div class="search-result" id="search-result">
+        <!-- <div class="search-result-item">
+                <img src="/Assets/image/logo.jpg" alt="" class="thumnal">
+                <div class="productName">MinhVy Beauty</div>
+                <a href="#" class="navigate"><i class="fa-solid fa-expand"></i></a>
             </div>
             <div class="search-result-item">
                 hello
-            </div>
-        </div>
+            </div> -->
+      </div>
     </nav>
-    <nav class="nav flex flex--col  md-h md-v ham-slide-close" id="nav-left">
-        <div id="logo-nav">
-            <img class="logo--large" src="Assets/image/Logo&Slogan MINHVYBEAUTY.png" alt="" srcset="">
-        </div>
-        <nav class="menu-items">
-            <ul class="gap-20 catalogs">
-                <li><a class="text" href="#">GIỚI THIỆU</a></li>
-                <li class="text drop-down">
-                    <a class="text" href="#sanpham">
-                        SẢN PHẨM
-                    </a>
-                    <ul class="drop-down--items">
-                        <li><a class="text" href="#thucphamchucnang">THỰC PHẨM CHỨC NĂNG</a>
-                            <ul>
-                                <li><a href="#danhchonguoilontuoi" class="text">Dành cho người lớn tuổi</a></li>
-                                <li><a href="#danhchonu" class="text">Dành cho Nữ</a></li>
-                                <li><a href="#danhchonam" class="text">Dành cho Nam</a></li>
-                                <li><a href="#danhchotreem" class="text">Dành cho trẻ em</a></li>
-                                <li><a href="#danhchonguoimangthai" class="text">Dành cho người mang thai</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="text" href="#lamdep">LÀM ĐẸP</a>
-                            <ul>
-                                <li><a href="#mypham" class="text">Mỹ phẩm</a></li>
-                                <li><a href="#nail" class="text">Nail</a></li>
-                                <li><a href="#mi" class="text">Mi</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="text" href="#giadung">GIA DỤNG</a>
-                            <ul>
-                                <li><a href="#trangtrinoithat" class="text">Trang trí nội thất</a></li>
-                                <li><a href="#dungcubep" class="text">Dụng cụ bếp</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a class="text" href="#">BLOG</a></li>
-                <li><a class="text" href="#">PHƯƠNG THỨC THANH TOÁN</a></li>
-                <li><a class="text" href="#">LIÊN HỆ</a></li>
+    <nav class="nav flex flex--col md-h md-v ham-slide-close" id="nav-left">
+      <div id="logo-nav">
+        <img
+          class="logo--large"
+          src="Assets/image/Logo&Slogan MINHVYBEAUTY.png"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <nav class="menu-items">
+        <ul class="gap-20 catalogs">
+          <li><a class="text" href="#">GIỚI THIỆU</a></li>
+          <li class="text drop-down">
+            <a class="text" href="#sanpham"> SẢN PHẨM </a>
+            <ul class="drop-down--items">
+              <li>
+                <a href="#thucphamchucnang">THỰC PHẨM CHỨC NĂNG</a>
+                <ul>
+                  <li>
+                    <a href="#danhchonguoilontuoi">Dành cho người lớn tuổi</a>
+                  </li>
+                  <li><a href="#danhchonu">Dành cho Nữ</a></li>
+                  <li><a href="#danhchonam">Dành cho Nam</a></li>
+                  <li><a href="#danhchotreem">Dành cho trẻ em</a></li>
+                  <li>
+                    <a href="#danhchonguoimangthai">Dành cho người mang thai</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#lamdep">LÀM ĐẸP</a>
+                <ul>
+                  <li><a href="#mypham">Mỹ phẩm</a></li>
+                  <li><a href="#nail">Nail</a></li>
+                  <li><a href="#mi">Mi</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#giadung">GIA DỤNG</a>
+                <ul>
+                  <li><a href="#trangtrinoithat">Trang trí nội thất</a></li>
+                  <li><a href="#dungcubep">Dụng cụ bếp</a></li>
+                </ul>
+              </li>
             </ul>
-            <div>
-
-            </div>
-        </nav>
+          </li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">PHƯƠNG THỨC THANH TOÁN</a></li>
+          <li><a href="#">LIÊN HỆ</a></li>
+        </ul>
+        <div></div>
+      </nav>
     </nav>
     <div class="container no-p">
-        <section id="#slider">
-            <div class="swiper slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide_1">
-                        <div class="slider--item flex md-v gap-10">
-                            <div class="content flex-1">
-                                <strong>MinhVy Beauty</strong>
-                                cửa hàng nhập khẩu Úc
-                                nơi mang đến cho bạn những sản
-                                phẩm chất lượng cao với giá cả hợp lý nhất!
-                            </div>
-                            <div class="media flex-1">
-                                <img src="Assets/image/logo.jpg" alt="" srcset="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide slide_2">
-                        <div class="slider--item flex md-v gap-10">
-                            <div class="content flex-1">
-                                Chào mừng đến với cửa hàng nhập khẩu Úc MinhVy Beauty - nơi mang đến cho bạn những sản
-                                phẩm chất lượng cao với giá cả hợp lý nhất!
-                            </div>
-                            <div class="media flex-1">
-                                <video>
-                                    <source src="Assets/image/dicho_1.mp4">
-                                </video>
-                            </div>
-                        </div>
-                    </div>
+      <section id="#slider">
+        <div class="swiper slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide_1">
+              <div class="slider--item flex md-v gap-10">
+                <div class="content flex-1">
+                  <strong>MinhVy Beauty</strong>
+                  cửa hàng nhập khẩu Úc nơi mang đến cho bạn những sản phẩm chất
+                  lượng cao với giá cả hợp lý nhất!
                 </div>
-                <div class="btn--next">
-                    <i class="fa-solid fa-chevron-right"></i>
+                <div class="media flex-1">
+                  <img src="Assets/image/logo.jpg" alt="" srcset="" />
                 </div>
-                <div class="btn--prev">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
+              </div>
             </div>
+            <div class="swiper-slide slide_2">
+              <div class="slider--item flex md-v gap-10">
+                <div class="content flex-1">
+                  Chào mừng đến với cửa hàng nhập khẩu Úc MinhVy Beauty - nơi
+                  mang đến cho bạn những sản phẩm chất lượng cao với giá cả hợp
+                  lý nhất!
+                </div>
+                <div class="media flex-1">
+                  <video>
+                    <source src="Assets/image/dicho_1.mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn--next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="btn--prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+        </div>
+      </section>
+      <section id="sanpham">
+        <section>
+          <div class="breaker">
+            <h1 id="thucphamchucnang"><strong>Thực phẩm chức năng</strong></h1>
+          </div>
+
+          <div class="breaker">
+            <h2 id="danhchonguoilontuoi">
+              <strong>Dành cho người lớn tuổi</strong>
+            </h2>
+          </div>
+          <section class="group-products">
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+          </section>
+
+          <div class="breaker">
+            <h2 id="danhchonu"><strong>Dành cho Nữ</strong></h2>
+          </div>
+          <section class="group-products">
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+          </section>
+          <div class="breaker">
+            <h2 id="danhchonam"><strong>Dành cho Nam</strong></h2>
+          </div>
+          <section class="group-products">
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+            <div class="product">
+              <div class="product-image">
+                <img src="/Assets/image/logo.jpg" alt="" />
+              </div>
+              <div class="product-name">
+                MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo Molestias eum repudiandae
+                soluta assumenda inventore similique vel tenetur velit sequi.
+                Quo Molestias eum repudiandae soluta assumenda inventore
+                similique vel tenetur velit sequi. Quo eligendi dolorem corporis
+                architecto voluptatum alias eius ratione, assumenda dicta.
+              </div>
+              <div class="product-price">20.000.000 vnd</div>
+              <div class="btn-addtocart">Add to cart</div>
+            </div>
+          </section>
+          <div class="breaker">
+            <h2 id="danhchotreem"><strong>Dành cho trẻ em</strong></h2>
+          </div>
+          <div class="breaker">
+            <h2 id="danhchonguoimangthai">
+              <strong>Dành cho người mang thai</strong>
+            </h2>
+          </div>
         </section>
-        <section id="sanpham">
-            <section>
-                <div class="breaker">
-                    <h1 id="thucphamchucnang"><strong>Thực phẩm chức năng</strong></h1>
-                </div>
-
-                <div class="breaker">
-                    <h2 id="danhchonguoilontuoi"><strong>Dành cho người lớn tuổi</strong></h2>
-                </div>
-                <section class="group-products">
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                </section>
-
-                <div class="breaker">
-                    <h2 id="danhchonu"><strong>Dành cho Nữ</strong></h2>
-                </div>
-                <section class="group-products">
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                </section>
-                <div class="breaker">
-                    <h2 id="danhchonam"><strong>Dành cho Nam</strong></h2>
-                </div>
-                <section class="group-products">
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                    <div class="product">
-                        <div class="product-image"><img src="/Assets/image/logo.jpg" alt=""></div>
-                        <div class="product-name">MinhVy Beauty Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            Molestias eum repudiandae soluta assumenda inventore similique vel tenetur velit sequi. Quo
-                            eligendi dolorem corporis architecto voluptatum alias eius ratione, assumenda dicta.</div>
-                        <div class="product-price">20.000.000 vnd</div>
-                        <div class="btn-addtocart">Add to cart</div>
-                    </div>
-                </section>
-                <div class="breaker">
-                    <h2 id="danhchotreem"><strong>Dành cho trẻ em</strong></h2>
-                </div>
-                <div class="breaker">
-                    <h2 id="danhchonguoimangthai"><strong>Dành cho người mang thai</strong></h2>
-                </div>
-            </section>
-            <section id="lamdep">
-                <section>
-                    <div class="breaker">
-                        <h1 id="lamdep"><strong>Làm đẹp</strong></h1>
-                    </div>
-                    <div class="breaker">
-                        <h2 id="mypham"><strong>Mỹ phẩm</strong></h2>
-                    </div>
-                    <div class="breaker">
-                        <h2 id="nail"><strong>Nail</strong></h2>
-                    </div>
-                    <div class="breaker">
-                        <h2 id="mi"><strong>Mi</strong></h2>
-                    </div>
-                </section>
-            </section>
-            <section id="giadung">
-                <section>
-                    <div class="breaker">
-                        <h1 id="giadung"><strong>Gia dụng</strong></h1>
-                    </div>
-
-                    <div class="breaker">
-                        <h2 id="trangtrinoithat"><strong>Trang trí nội thất</strong></h2>
-                    </div>
-                    <div class="breaker">
-                        <h2 id="dungcubep"><strong>Dụng cụ bếp</strong></h2>
-                    </div>
-                </section>
-            </section>
+        <section id="lamdep">
+          <section>
+            <div class="breaker">
+              <h1 id="lamdep"><strong>Làm đẹp</strong></h1>
+            </div>
+            <div class="breaker">
+              <h2 id="mypham"><strong>Mỹ phẩm</strong></h2>
+            </div>
+            <div class="breaker">
+              <h2 id="nail"><strong>Nail</strong></h2>
+            </div>
+            <div class="breaker">
+              <h2 id="mi"><strong>Mi</strong></h2>
+            </div>
+          </section>
         </section>
+        <section id="giadung">
+          <section>
+            <div class="breaker">
+              <h1 id="giadung"><strong>Gia dụng</strong></h1>
+            </div>
+
+            <div class="breaker">
+              <h2 id="trangtrinoithat"><strong>Trang trí nội thất</strong></h2>
+            </div>
+            <div class="breaker">
+              <h2 id="dungcubep"><strong>Dụng cụ bếp</strong></h2>
+            </div>
+          </section>
+        </section>
+      </section>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
-    <script>
-        const { autocomplete } = window['@algolia/autocomplete-js'];
-    </script>
-    <script src="Assets/js/index.js"></script>
+    <!-- <script type="module" src="./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js" ;></script>
+    <script type="module" src="./node_modules/algoliasearch/lite.js" ;></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@6.0.1/dist/umd/index.min.js"></script>
+    1
+    <script type="module" src="Assets/js/index.js"></script>
     <script type="module" src="/Assets/js/_slider.js"></script>
     <script type="module" src="/Assets/js/_search.js"></script>
-</body>
-
+  </body>
 </html>

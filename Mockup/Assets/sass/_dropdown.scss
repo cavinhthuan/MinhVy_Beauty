@@ -1,5 +1,5 @@
-@import "mixin";
-@import "_variables.scss";
+@use "mixin" as *;
+@use "_variables.scss" as *;
 .drop-down {
   position: relative;
   &.focus {
@@ -31,16 +31,18 @@
       font-weight: 300;
       display: none;
 
-      & > li {
-        a {
+      & + li {
+        color: $primary;
+        font-size: large;
+        margin-top: 20px;
+        & > a.text {
+          text-decoration: none;
+
           & + ul {
-            color: $white;
+            color: $primary;
             font-weight: 300;
           }
         }
-        color: $white !important;
-        font-size: large;
-        margin-top: 20px;
       }
       &::before {
         content: "";
@@ -98,11 +100,33 @@
       justify-content: space-around;
 
       & > li {
-        color: $primary !important;
+        color: $primary ;
         a {
+          color: $primary ;
+          text-decoration: none;
           & + ul {
-            color: black;
+            color: $black;
             font-weight: 300;
+            text-decoration: none;
+             & >li{
+              color: $black;
+              font-weight: 300;
+              text-decoration: none;
+              & > a {
+                color: $black;
+                text-decoration: none;
+                &:active {
+                  color: $black;
+                }
+                &:visited {
+                  color: $black;
+                }
+              }
+              &:hover {
+                font-weight: 700;
+                color: $primary;
+              }
+             }
           }
         }
       }

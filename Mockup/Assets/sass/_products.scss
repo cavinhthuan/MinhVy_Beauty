@@ -1,7 +1,12 @@
+@use "_variables.scss" as *;
+@use "mixin" as *;
 $product-width: 135px;
 .group-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($product-width, 1fr));
+  @include media(laptop) {
+    grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+  }
   justify-content: start;
   align-items: center;
   justify-items: center;
@@ -32,7 +37,8 @@ $product-width: 135px;
         border-radius: 5px;
       }
       &::before {
-        content: "xem thêm";
+        content: "Xem thêm";
+        font-family: $font-family;
         color: white;
         position: absolute;
         display: flex;

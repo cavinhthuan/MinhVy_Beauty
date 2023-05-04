@@ -2,6 +2,7 @@
 @use "dropdown" as *;
 @use "flex.scss" as *;
 @use "text" as *;
+@use "mixin" as *;
 
 @include media(mobile) {
   .nav--mobile {
@@ -21,6 +22,17 @@
     font-weight: 500;
     color: $white;
     min-width: 80%;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: transparent;
+      min-width: 25%;
+      height: 100%;
+      top: 0px;
+      left: 100%;
+      pointer-events: auto;
+    }
     #logo-nav {
       display: none;
     }
@@ -29,8 +41,10 @@
       overflow-y: scroll;
       padding: 0 20px;
       a {
-        // color: black;
+        color: $white;
         line-height: 40px;
+        text-decoration: none;
+
         &:hover {
           //   font-weight: 700;
           color: $primary;
@@ -101,9 +115,21 @@
         display: flex;
         gap: 20px;
         & > li {
-          color: black;
+          color: $black;
           line-height: 40px;
           font-weight: 700;
+
+          & > a {
+            color: $black;
+            text-decoration: none;
+
+            &:active {
+              color: $black;
+            }
+            &:visited {
+              color: $black;
+            }
+          }
           &:hover {
             font-weight: 700;
             color: $primary;
