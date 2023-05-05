@@ -1,5 +1,6 @@
 @use "_variables.scss" as *;
 @use "mixin" as *;
+@use "animation" as *;
 $product-width: 135px;
 .group-products {
   display: grid;
@@ -11,14 +12,23 @@ $product-width: 135px;
   align-items: center;
   justify-items: center;
   // justify-content: space-between;
-  gap: 10px 20px;
-  padding: 0 20px;
+  gap: 20px 10px;
+  padding: 0 11px;
   .product {
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-around;
     flex-direction: column;
+    max-width: 354px;
     min-width: $product-width;
+    height: 100%;
+    text-align: center;
+    gap: 11px;
+    //animate
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
     &-image {
       position: relative;
       & > img {
@@ -26,24 +36,27 @@ $product-width: 135px;
         object-fit: contain;
       }
       &::after {
-        content: "";
-        position: absolute;
-        width: 70%;
-        height: 3em;
-        right: 50%;
-        top: 35%;
-        transform: translate(50%);
-        border: 3px solid white;
-        border-radius: 5px;
-      }
-      &::before {
         content: "Xem thêm";
         font-family: $font-family;
         color: white;
+
         position: absolute;
+        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 70%;
+        height: 3em;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        border: 3px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      &::before {
+        content: "";
+        position: absolute;
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
@@ -63,16 +76,25 @@ $product-width: 135px;
     }
     &-name {
       text-align: center;
-      white-space: nowrap;
-      width: $product-width;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-height: 2em;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      max-height: 2.5em;
+      width: 100%;
+
+      font-family: $font-family;
+      font-weight: 500;
     }
     &-price {
+      text-align: center;
+      color: #e00c19;
+      font-weight: 600;
+      font-family: $font-family;
     }
     .btn-addtocart {
-      background-color: #222;
+      background-color: $primary;
       border-radius: 4px;
       border-style: none;
       box-sizing: border-box;
@@ -83,13 +105,12 @@ $product-width: 135px;
       font-size: 16px;
       font-weight: 700;
       line-height: 1.5;
-      margin: 0;
       max-width: none;
-      min-height: 44px;
+      min-height: 27px;
       min-width: 10px;
       outline: none;
       overflow: hidden;
-      padding: 9px 20px 8px;
+      padding: 7px 15px 6px;
       position: relative;
       text-align: center;
       text-transform: none;
