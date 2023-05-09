@@ -6,11 +6,11 @@ const swiper = new Swiper(".swiper", {
 
   // Navigation arrows
   navigation: {
-    nextEl: ".btn--next",
-    prevEl: ".btn--prev",
+    nextEl: ".slide--next",
+    prevEl: ".slide--prev",
   },
   autoplay: {
-    delay: 10000,
+    delay: 5000,
     disableOnInteraction: true,
   },
 });

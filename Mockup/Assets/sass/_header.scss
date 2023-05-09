@@ -67,11 +67,14 @@ header {
                 animation: slide-right 0.25s both;
               }
             }
-            &:not(:checked) ~ {
-              .nav--mobile {
+            &:not(:checked) {
+              & ~ .nav--mobile {
                 display: block !important;
                 left: 0;
                 animation: slide-left 0.25s both;
+                &::after{
+                  display: none;
+                }
               }
             }
           }
@@ -290,6 +293,7 @@ header {
       .message {
         order: 1;
         width: 100%;
+        text-transform: capitalize;
       }
       .act {
         order: 4;

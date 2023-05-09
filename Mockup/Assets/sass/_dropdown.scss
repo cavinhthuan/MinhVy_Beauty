@@ -1,148 +1,145 @@
 @use "mixin" as *;
 @use "_variables.scss" as *;
-.drop-down {
+@use "animation" as *;
+
+li.drop-down {
   position: relative;
-  &.focus {
-    & > .drop-down--items {
-      display: flex !important;
-      flex-direction: column;
+  cursor: pointer;
+  & > a {
+    font-weight: 700;
+    font-size: $small;
+    @include media(mobile) {
+      font-weight: 500;
     }
   }
-  @include media(mobile) {
-    &::before {
+  &::before {
+    content: "\f078";
+    position: absolute;
+    font-size: 0.75em;
+    right: -1em;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 6 Free";
+    font-variant: normal;
+    font-style: normal;
+    display: var(--fa-display, inline-block);
+    font-weight: 900;
+    text-rendering: auto;
+    @include media(mobile) {
       content: "\f0d7";
-      position: absolute;
       top: 10px;
-      right: 0;
-      font-family: "Font Awesome 6 Free";
-      font-variant: normal;
-      font-style: normal;
-      display: var(--fa-display, inline-block);
-      font-weight: 900;
-      text-rendering: auto;
-      &:hover > .drop-down--items {
-        display: flex;
-        flex-direction: column;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    width: 0.75em;
+    height: 100%;
+  }
+  &:hover {
+    & > ul.drop-down--items {
+      display: flex;
+      animation: fadeIn 0.5s ease-in-out;
+      @include media(mobile) {
+        display: none;
+        color: $primary;
+        font-weight: 500;
       }
     }
+  }
 
-    &:hover {
-      font-weight: 700;
-      & > .drop-down--items {
-        display: flex !important;
-        flex-direction: column;
-      }
-    }
-    &--items {
+  ul.drop-down--items {
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+    width: 50vw;
+    box-shadow: $box_shadow;
+    background: $white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: $layer-3;
+    justify-content: space-around;
+    @include media(mobile) {
+      position: relative;
+      flex-direction: column;
+      gap: 0;
+      width: auto;
+      box-shadow: none;
+      background: none;
+      padding: 0;
+      right: 0;
       margin-left: 10px;
       font-weight: 300;
-      display: none;
-
-      & + li {
-        color: $primary;
+      transform: none;
+    }
+    & > li {
+      color: $primary;
+      @include media(mobile) {
         font-size: large;
-        margin-top: 20px;
-        & > a.text {
-          text-decoration: none;
-
-          & + ul {
-            color: $primary;
-            font-weight: 300;
-          }
+        margin-top: 5px;
+        color: $white;
+      }
+      & > a {
+        color: $primary;
+        text-decoration: none;
+        font-weight: 700;
+        @include media(mobile) {
+          color: $white;
+          font-weight: 500;
+          font-size: $small;
         }
       }
-      &::before {
-        content: "";
-        position: absolute;
-        top: -30px;
-        width: 100%;
-        margin-top: 50px;
-      }
-    }
-  }
-  @include media(laptop) {
-    &::before {
-      content: "\f078";
-      position: absolute;
-      font-size: 0.75em;
-      right: -1em;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: "Font Awesome 6 Free";
-      font-variant: normal;
-      font-style: normal;
-      display: var(--fa-display, inline-block);
-      font-weight: 900;
-      text-rendering: auto;
-    }
-    &:hover {
-      font-weight: 700;
-      &::before {
-        content: "";
-        width: 140%;
-        height: 100%;
-        top: auto;
-        transform: none;
-        border-bottom: $secondary 5px solid;
-        left: 50%;
-        transform: translateX(-50%);
-        stroke: 1px;
-        bottom: 0px;
-      }
-      & > .drop-down--items {
-        display: flex;
-      }
-    }
-    &--items {
-      position: absolute;
-      display: none;
-      box-shadow: $box_shadow;
-      background: $white;
-      padding: 10px 50px;
-      width: 50vw;
-      border-radius: 5px;
-      right: -50%;
-      transform: translateX(50%);
-      z-index: $layer-3;
-      justify-content: space-around;
-
-      & > li {
-        color: $primary;
-        a {
+      & > a + ul {
+        color: $black;
+        font-weight: 300;
+        text-decoration: none;
+        @include media(mobile) {
           color: $primary;
+        }
+        & > li {
+          color: $black;
+          font-weight: 300;
           text-decoration: none;
-          & + ul {
+          & > a {
+            width: 100%;
+            height: 100%;
             color: $black;
-            font-weight: 300;
             text-decoration: none;
-            & > li {
+            display: block;
+            width: 100%;
+            height: 100%;
+            &:active {
               color: $black;
+            }
+            &:visited {
+              color: $black;
+            }
+            @include media(mobile) {
+              color: $white;
               font-weight: 300;
-              text-decoration: none;
-              & > a {
-                color: $black;
-                text-decoration: none;
-                &:active {
-                  color: $black;
-                }
-                &:visited {
-                  color: $black;
-                }
+              font-size: $small;
+              &:active {
+                color: $white;
               }
-              &:hover {
-                font-weight: 700;
-                color: $primary;
+              &:visited {
+                color: $white;
               }
             }
           }
+          &:hover {
+            & > a {
+              color: $primary;
+              text-decoration: none;
+              font-weight: 700; //default header 1
+            }
+          }
         }
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: -30px;
-        width: 100%;
-        margin-top: 50px;
       }
     }
   }

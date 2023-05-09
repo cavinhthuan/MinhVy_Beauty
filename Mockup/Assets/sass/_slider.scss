@@ -1,41 +1,45 @@
 @use "variables" as *;
 @use "flex" as *;
 @use "_mixin.scss" as *;
-$height: 600px;
-$btn-size: 35px;
-.slider {
+@use "_skeleton.scss" as *;
+@use "sass:math";
+
+$btn-size: 30px;
+%btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: $layer-2;
+  color: $secondary !important;
+  text-shadow: $box_shadow;
+  outline: none;
+  font-size: $btn-size;
+  &:hover {
+    cursor: pointer;
+    color: $secondary-lv2 !important;
+  }
+  @include media(mobile) {
+    display: none;
+  }
+}
+.slide {
   font-family: $font-family;
   width: 100%;
-  height: $height;
   position: relative;
   z-index: $layer-1;
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  padding: 11px 0;
   overflow-y: hidden;
-  .btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: $layer-2;
-    color: $secondary !important;
-    text-shadow: $box_shadow;
-    outline: none;
-    &:hover {
-      cursor: pointer;
-      color: $secondary-lv2 !important;
-    }
-    color: $black;
-    font-size: large;
+  margin: 11px 0;
+  & {
     &--next {
+      @extend %btn;
       right: -$btn-size;
-      @extend .btn;
     }
     &--prev {
+      @extend %btn;
       left: -$btn-size;
-      @extend .btn;
     }
-  }
-  &:hover {
-    .btn {
+    &:hover > & {
       &--next {
         right: $btn-size;
         animation: btn-slide--next 0.25s ease;
@@ -46,63 +50,132 @@ $btn-size: 35px;
       }
     }
   }
-  &--item {
-    height: 100%;
-    padding: 0px calc($btn-size + 1em);
-    .content {
-      font-size: 2em;
-    }
-    .media {
-      img {
-        width: 100%;
-        object-fit: contain;
+  .swiper-wrapper {
+    align-items: center;
+  }
+  .banner {
+    &-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding: 10px 2 * $btn-size;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+      @include media(mobile) {
+        padding: 10px 11px;
       }
-      video {
-        width: 100%;
-        object-fit: contain;
-        border-radius: 20px;
+      .message {
+        display: flex;
+        flex: 1 0 calc(50% - 10px);
+        align-items: center;
+        font-size: 2em;
+        user-select: none;
+        @include media(mobile) {
+          font-size: large;
+        }
+      }
+      .media {
+        flex: 1 0 calc(50% - 10px);
+        img {
+          object-fit: contain;
+          width: 100%;
+        }
+        video {
+          object-fit: contain;
+          width: 100%;
+          border-radius: 5px;
+        }
       }
     }
   }
-  @include media(mobile) {
-    height: 30vh;
-    .btn {
-      display: none;
-      &--next {
-        @extend .btn;
-      }
-      &--prev {
-        @extend .btn;
-      }
-    }
-    &--item {
-      height: 100%;
-      padding: 5px 10px;
-      flex-wrap: wrap-reverse;
-      .content {
-        font-size: 1em;
-        flex-grow: 1;
+  .blog {
+    &-container {
+      display: flex;
+      gap: 0px 60px;
+      align-items: center;
+      padding: 10px 100px;
+      height: 374px;
+
+      @include media(mobile) {
+        padding: 10px 11px;
+        gap: 0px 20px;
+        height: 174px;
       }
       .media {
-        flex-grow: 1;
-        height: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        border-radius: 10px;
+        overflow: hidden;
+        flex: 1.5 0 math.div(2, 3) * 100%;
+        height: 100%;
+        min-height: 170px;
+        position: relative;
         img {
-          height: 80%;
-          object-fit: contain;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          object-fit: fill;
+          object-position: center;
+          width: 100%;
         }
-        video {
-          height: 80%;
-          object-fit: contain;
-          border-radius: 20px;
+        @include media(mobile) {
+          flex: 1 0 50%;
+        }
+      }
+      .blog-brief {
+        overflow: hidden;
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex-grow: 1;
+        justify-content: space-between;
+        .title {
+          font-size: 2.5em;
+          font-weight: 700;
+          text-transform: capitalize;
+          line-height: 60px;
+          align-self: flex-start;
+          @include media(mobile) {
+            font-size: 1em;
+            line-height: 1em;
+          }
+        }
+        .description {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          max-height: 2.5em;
+          font-size: 0.75em;
+          opacity: 0.7;
+        }
+        .author {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+          .avt {
+            width: 60px;
+            img {
+              object-fit: cover;
+              width: 100%;
+            }
+          }
+          .name {
+            font-size: 0.75em;
+            text-align: left;
+          }
         }
       }
     }
   }
 }
-
 @keyframes btn-slide--next {
   0% {
     right: -$btn-size;

@@ -8,6 +8,58 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <title>MinhVy Beauty</title>
+    <meta
+      name="description"
+      content="MINHVYBEAUTY chuyên cung cấp các mặc hàng sỉ lẽ ÚT
+34 Lê Tự Tài, phường 4, quận Phú Nhuận, TP.HCM, Việt Nam.
+Liên hệ:0908646614
+Email:cahongtam@gmail.com"
+    />
+
+    <!-- Google / Search Engine Tags -->
+    <meta
+      itemprop="name"
+      content="MinhVy Beauty chuyên cung cấp sỉ lẻ nhập khẩu Út"
+    />
+    <meta
+      itemprop="description"
+      content="MINHVYBEAUTY chuyên cung cấp các mặc hàng sỉ lẽ ÚT
+34 Lê Tự Tài, phường 4, quận Phú Nhuận, TP.HCM, Việt Nam.
+Liên hệ:0908646614
+Email:cahongtam@gmail.com"
+    />
+    <meta itemprop="image" content="Assets/image/logo.jpg" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://fpt-dteam.000webhostapp.com" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="MinhVy Beauty chuyên cung cấp sỉ lẻ nhập khẩu Út"
+    />
+    <meta
+      property="og:description"
+      content="MINHVYBEAUTY chuyên cung cấp các mặc hàng sỉ lẽ ÚT
+34 Lê Tự Tài, phường 4, quận Phú Nhuận, TP.HCM, Việt Nam.
+Liên hệ:0908646614
+Email:cahongtam@gmail.com"
+    />
+    <meta property="og:image" content="Assets/image/logo.jpg" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MinhVy Beauty chuyên cung cấp sỉ lẻ nhập khẩu Út"
+    />
+    <meta
+      name="twitter:description"
+      content="MINHVYBEAUTY chuyên cung cấp các mặc hàng sỉ lẽ ÚT
+34 Lê Tự Tài, phường 4, quận Phú Nhuận, TP.HCM, Việt Nam.
+Liên hệ:0908646614
+Email:cahongtam@gmail.com"
+    />
+    <meta name="twitter:image" content="Assets/image/logo.jpg" />
     <!-- lib -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/node_modules/swiper/swiper-bundle.css" />
@@ -27,31 +79,32 @@
     <div id="fb-root"></div>
 
     <!-- Your Plugin chat code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
     <script>
-      var chatbox = document.getElementById('fb-customer-chat');
+      var chatbox = document.getElementById("fb-customer-chat");
       chatbox.setAttribute("page_id", "104397909593378");
       chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
     <!-- Your SDK code -->
     <script>
-      window.fbAsyncInit = function() {
+      window.fbAsyncInit = function () {
         FB.init({
-          xfbml            : true,
-          version          : 'v16.0'
+          xfbml: true,
+          version: "v16.0",
         });
       };
 
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
+      })(document, "script", "facebook-jssdk");
     </script>
     <header class="container">
       <div class="header flex md-v">
@@ -112,7 +165,9 @@
                       <li class="drop-down">
                         <a class="text" href="#giadung">GIA DỤNG</a>
                         <ul class="drop-down--items">
-                          <li><a href="#trangtrinoithat">Trang trí nội thất</a></li>
+                          <li>
+                            <a href="#trangtrinoithat">Trang trí nội thất</a>
+                          </li>
                           <li><a href="#dungcubep">Dụng cụ bếp</a></li>
                         </ul>
                       </li>
@@ -133,8 +188,8 @@
         />
         <div class="message text--center">
           <p>
-            <strong>MinhVy Beauty</strong> Uy tín hàng đầu, Chuyên sĩ lẻ hàng
-            nội địa Úc
+            Xin chào quý khách, chào mừng quý khách đến với
+            <strong>MINHVY BEAUTY</strong>!
           </p>
         </div>
         <div class="act">
@@ -187,7 +242,7 @@
       <nav class="menu-items">
         <ul class="gap-20 catalogs">
           <li><a class="text" href="#">GIỚI THIỆU</a></li>
-          <li class="text drop-down">
+          <li class="drop-down">
             <a class="text" href="#sanpham"> SẢN PHẨM </a>
             <ul class="drop-down--items">
               <li>
@@ -229,40 +284,70 @@
       </nav>
     </nav>
     <div class="container no-p">
-      <section id="#slider">
-        <div class="swiper slider">
+      <section>
+        <div class="swiper slide">
           <div class="swiper-wrapper">
-            <div class="swiper-slide slide_1">
-              <div class="slider--item flex md-v gap-10">
-                <div class="content flex-1">
-                  <strong>MinhVy Beauty</strong>
-                  cửa hàng nhập khẩu Úc nơi mang đến cho bạn những sản phẩm chất
-                  lượng cao với giá cả hợp lý nhất!
+            <!-- <div class="swiper-slide slide_1">
+              <div class="banner-container">
+                <div class="message">
+                  <p>
+                    <strong>MinhVy Beauty</strong> hàng nhập khẩu Úc nơi mang
+                    đến cho bạn những sản phẩm chất lượng cao với giá cả hợp lý
+                    nhất
+                  </p>
                 </div>
-                <div class="media flex-1">
-                  <img src="Assets/image/logo.jpg" alt="" srcset="" />
+                <div class="media">
+                  <img src="Assets/image/logo.jpg" alt="" />
                 </div>
               </div>
             </div>
             <div class="swiper-slide slide_2">
-              <div class="slider--item flex md-v gap-10">
-                <div class="content flex-1">
-                  Chào mừng đến với cửa hàng nhập khẩu Úc MinhVy Beauty - nơi
-                  mang đến cho bạn những sản phẩm chất lượng cao với giá cả hợp
-                  lý nhất!
+              <div class="banner-container">
+                <div class="message">
+                  <p>
+                    <strong>MinhVy Beauty</strong> hàng nhập khẩu Úc nơi mang
+                    đến cho bạn những sản phẩm chất lượng cao với giá cả hợp lý
+                    nhất
+                  </p>
                 </div>
-                <div class="media flex-1">
-                  <video>
-                    <source src="Assets/image/dicho_1.mp4" />
-                  </video>
+                <div class="media">
+                  <video src="Assets/image/dicho_1.mp4" controls></video>
+                </div>
+              </div>
+            </div> -->
+            <div class="swiper-slide slide_3">
+              <div class="banner-container">
+                <!-- <div class="message">
+                  <p>
+                    <strong>MinhVy Beauty</strong> hàng nhập khẩu Úc nơi mang
+                    đến cho bạn những sản phẩm chất lượng cao với giá cả hợp lý
+                    nhất
+                  </p>
+                </div> -->
+                <div class="media">
+                  <img src="Assets/image/Banner 1.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide slide_4">
+              <div class="banner-container">
+                <!-- <div class="message">
+                  <p>
+                    <strong>MinhVy Beauty</strong> hàng nhập khẩu Úc nơi mang
+                    đến cho bạn những sản phẩm chất lượng cao với giá cả hợp lý
+                    nhất
+                  </p>
+                </div> -->
+                <div class="media">
+                  <img src="Assets/image/Banner 2.jpg" alt="" />
                 </div>
               </div>
             </div>
           </div>
-          <div class="btn--next">
+          <div class="slide--next">
             <i class="fa-solid fa-chevron-right"></i>
           </div>
-          <div class="btn--prev">
+          <div class="slide--prev">
             <i class="fa-solid fa-chevron-left"></i>
           </div>
         </div>
@@ -278,28 +363,60 @@
               <strong>Dành cho người lớn tuổi</strong>
             </h2>
           </div>
-          <section class="group-products"></section>
+          <section class="group-products">
+            <div class="view-more">
+              <input type="checkbox" name="view-more-input" />
+            </div>
+            <!-- <div class="product scale-up-bl">
+              <div class="product-image">
+                <img
+                  src="Assets/image/daugioxanh (2).jpg"
+                  alt="Dầu xanh Eagle Brand Medicated Oil Singapore nhập Úc 24ml"
+                />
+              </div>
+              <div class="product-name">
+                Dầu xanh Eagle Brand Medicated Oil Singapore nhập Úc 24ml
+              </div>
+              <div class="product-price">125.000 <u>đ</u></div>
+              <div class="btn-addtocart" data-product-id="5">Chọn Mua</div>
+              
+            </div> -->
+          </section>
 
           <div class="breaker">
             <h2 id="danhchonu"><strong>Dành cho Nữ</strong></h2>
           </div>
-          <section class="group-products"></section>
+          <section class="group-products">
+            <div class="view-more">
+              <input type="checkbox" name="view-more-input" />
+            </div>
+          </section>
           <div class="breaker">
             <h2 id="danhchonam"><strong>Dành cho Nam</strong></h2>
           </div>
-          <section class="group-products"></section>
+          <section class="group-products">
+            <div class="view-more">
+              <input type="checkbox" name="view-more-input" />
+            </div>
+          </section>
           <div class="breaker">
             <h2 id="danhchotreem"><strong>Dành cho trẻ em</strong></h2>
           </div>
-          <section class="group-products"></section>
+          <section class="group-products">
+            <div class="view-more">
+              <input type="checkbox" name="view-more-input" />
+            </div>
+          </section>
           <div class="breaker">
             <h2 id="danhchonguoimangthai">
               <strong>Dành cho người mang thai</strong>
             </h2>
           </div>
-          <section class="group-products"></section>
-
-          <section class="group-products"></section>
+          <section class="group-products">
+            <div class="view-more">
+              <input type="checkbox" name="view-more-input" />
+            </div>
+          </section>
         </section>
         <section id="lamdep">
           <section>
@@ -309,17 +426,29 @@
             <div class="breaker">
               <h2 id="mypham"><strong>Mỹ phẩm</strong></h2>
             </div>
-            <section class="group-products"></section>
+            <section class="group-products">
+              <div class="view-more">
+                <input type="checkbox" name="view-more-input" />
+              </div>
+            </section>
 
             <div class="breaker">
               <h2 id="nail"><strong>Nail</strong></h2>
             </div>
-            <section class="group-products"></section>
+            <section class="group-products">
+              <div class="view-more">
+                <input type="checkbox" name="view-more-input" />
+              </div>
+            </section>
 
             <div class="breaker">
               <h2 id="mi"><strong>Mi</strong></h2>
             </div>
-            <section class="group-products"></section>
+            <section class="group-products">
+              <div class="view-more">
+                <input type="checkbox" name="view-more-input" />
+              </div>
+            </section>
           </section>
         </section>
         <section>
@@ -330,14 +459,264 @@
             <div class="breaker">
               <h2 id="trangtrinoithat"><strong>Trang trí nội thất</strong></h2>
             </div>
-            <section class="group-products"></section>
+            <section class="group-products">
+              <div class="view-more">
+                <input type="checkbox" name="view-more-input" />
+              </div>
+            </section>
             <div class="breaker">
               <h2 id="dungcubep"><strong>Dụng cụ bếp</strong></h2>
             </div>
-            <section class="group-products"></section>
+            <section class="group-products">
+              <div class="view-more">
+                <input type="checkbox" name="view-more-input" />
+              </div>
+            </section>
           </section>
         </section>
       </section>
+
+      <section id="#slider-blog">
+        <div class="breaker">
+          <h1 id="lamdep"><strong>BLOG</strong></h1>
+        </div>
+        <div class="swiper slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide blog-1">
+              <div class="blog-container">
+                <!-- image -->
+                <div class="media">
+                  <img class="skeleton" src="/Assets/image/blog1.jpg" alt="" />
+                </div>
+                <div class="blog-brief">
+                  <div class="title">
+                    <h2>
+                      Có nên sử dụng thực phẩm chức năng? Đánh giá thực phẩm
+                      chức năng của Úc
+                    </h2>
+                  </div>
+                  <div class="description">
+                    Thực phẩm chức năng là các sản phẩm có thành phần dinh dưỡng
+                    hoặc thảo dược được bán trên thị trường với tuyên bố có tác
+                    dụng chữa bệnh hoặc cải thiện sức khỏe. Với tình trạng ô
+                    nhiễm môi trường, áp lực công việc và cuộc sống hiện đại,
+                    người tiêu dùng ngày càng quan tâm đến việc sử dụng thực
+                    phẩm chức năng để bổ sung dinh dưỡng và duy trì sức khỏe
+                  </div>
+                  <div class="author">
+                    <!-- <div class="avt"> -->
+                      <!-- <img src="/Assets/image/logo.jpg" alt="" /> -->
+                    <!-- </div> -->
+                    <div class="name">MinhVy Beauty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide blog-2">
+              <div class="blog-container">
+                <!-- image -->
+                <div class="media">
+                  <img class="skeleton" src="/Assets/image/blog2.jpg" alt="" />
+                </div>
+                <div class="blog-brief">
+                  <div class="title">
+                    <h2>Collagen - Điều Cần Biết Và Lợi Ích Khi Sử Dụng</h2>
+                  </div>
+                  <div class="description">
+                    Collagen là một loại protein quan trọng tồn tại trong cơ thể
+                    con người và động vật có vú. Nó được sản xuất tự nhiên bởi
+                    cơ thể nhưng sau tuổi 25, sản xuất collagen của cơ thể giảm
+                    dần, khiến cho da trở nên khô và nhăn nheo. Do đó, sử dụng
+                    collagen thường xuyên có thể giúp tái tạo da, tóc, móng và
+                    giảm thiểu các triệu chứng lão hóa.
+                  </div>
+                  <div class="author">
+                    <!-- <div class="avt"> -->
+                      <!-- <img src="/Assets/image/logo.jpg" alt="" /> -->
+                    <!-- </div> -->
+                    <div class="name">MinhVy Beauty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide blog-3">
+              <div class="blog-container">
+                <!-- image -->
+                <div class="media">
+                  <img class="skeleton" src="/Assets/image/blog3.png" alt="" />
+                </div>
+                <div class="blog-brief">
+                  <div class="title">
+                    <h2>
+                      Glucosamine và chondroitin: Tầm quan trọng và tác dụng phụ
+                    </h2>
+                  </div>
+                  <div class="description">
+                    Các bài viết về dinh dưỡng và chăm sóc sức khỏe thường nhắc
+                    đến các chất bổ sung glucosamine và chondroitin. Nhưng chúng
+                    ta có thể sử dụng chúng như thế nào, liệu chúng có an toàn
+                    cho sức khỏe hay không? Trong bài viết này, chúng ta sẽ tìm
+                    hiểu chi tiết về hai chất này và ảnh hưởng của chúng đến sức
+                    khỏe con người.
+                  </div>
+                  <div class="author">
+                    <!-- <div class="avt"> -->
+                      <!-- <img src="/Assets/image/logo.jpg" alt="" /> -->
+                    <!-- </div> -->
+                    <div class="name">MinhVy Beauty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide blog-4">
+              <div class="blog-container">
+                <!-- image -->
+                <div class="media">
+                  <img class="skeleton" src="/Assets/image/blog4.png" alt="" />
+                </div>
+                <div class="blog-brief">
+                  <div class="title">
+                    <h2>
+                      Thường Xuyên Trang Điểm: Liệu Có Làm Tổn Thương Da Mặt,
+                      Lão Hóa Nhanh Hơn?
+                    </h2>
+                  </div>
+                  <div class="description">
+                    Trang điểm đã trở thành một phần không thể thiếu trong cuộc
+                    sống của phụ nữ hiện đại. Tuy nhiên, một số người vẫn còn lo
+                    lắng rằng việc trang điểm thường xuyên sẽ gây hại cho da mặt
+                    của họ. Vậy liệu có phải như vậy không? Chúng ta hãy cùng
+                    tìm hiểu.
+                  </div>
+                  <div class="author">
+                    <!-- <div class="avt"> -->
+                      <!-- <img src="/Assets/image/logo.jpg" alt="" /> -->
+                    <!-- </div> -->
+                    <div class="name">MinhVy Beauty</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide--next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="slide--prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <ul>
+          <li>
+            <h1>Thông tin liên hệ</h1>
+            <ul>
+              <li>
+                Địa chỉ:
+                <span
+                  >34 Lê Tự Tài, phường 4, quận Phú Nhuận, TP.HCM, Việt
+                  Nam</span
+                >
+              </li>
+              <li>Số điện thoại: <a href="tel:0908646614">0908646614</a></li>
+              <li>
+                Mail:
+                <a href="mailto:cahongtam@gmail.com">cahongtam@gmail.com</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h1>Kênh kết nối</h1>
+            <ul class="flex gap-20">
+              <li>
+                <!-- fb -->
+                <a
+                  href="https://www.facebook.com/minhvybeauty"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                    <path
+                      d="M13,0C5.82,0,0,5.82,0,13c0,6.518,4.801,11.899,11.057,12.839v-9.394H7.84v-3.417h3.217v-2.274 c0-3.765,1.834-5.417,4.963-5.417c1.498,0,2.291,0.111,2.666,0.162v2.983h-2.134c-1.328,0-1.792,1.259-1.792,2.679v1.868h3.893 l-0.528,3.417H14.76v9.422C21.105,25.006,26,19.581,26,13C26,5.82,20.18,0,13,0z"
+                    />
+                  </svg> -->
+                  <img src="Assets/image/facebook (1).png" alt="" />
+                </a>
+              </li>
+              <li>
+                <!-- zalo -->
+                <a
+                  href="https://zalo.me/0908646614"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path
+                      d="M9 4C6.2504839 4 4 6.2504839 4 9L4 41C4 43.749516 6.2504839 46 9 46L41 46C43.749516 46 46 43.749516 46 41L46 9C46 6.2504839 43.749516 4 41 4L9 4 z M 9 6L15.580078 6C12.00899 9.7156859 10 14.518083 10 19.5C10 24.66 12.110156 29.599844 15.910156 33.339844C16.030156 33.549844 16.129922 34.579531 15.669922 35.769531C15.379922 36.519531 14.799687 37.499141 13.679688 37.869141C13.249688 38.009141 12.97 38.430859 13 38.880859C13.03 39.330859 13.360781 39.710781 13.800781 39.800781C16.670781 40.370781 18.529297 39.510078 20.029297 38.830078C21.379297 38.210078 22.270625 37.789609 23.640625 38.349609C26.440625 39.439609 29.42 40 32.5 40C36.593685 40 40.531459 39.000731 44 37.113281L44 41C44 42.668484 42.668484 44 41 44L9 44C7.3315161 44 6 42.668484 6 41L6 9C6 7.3315161 7.3315161 6 9 6 z M 33 15C33.55 15 34 15.45 34 16L34 25C34 25.55 33.55 26 33 26C32.45 26 32 25.55 32 25L32 16C32 15.45 32.45 15 33 15 z M 18 16L23 16C23.36 16 23.700859 16.199531 23.880859 16.519531C24.050859 16.829531 24.039609 17.219297 23.849609 17.529297L19.800781 24L23 24C23.55 24 24 24.45 24 25C24 25.55 23.55 26 23 26L18 26C17.64 26 17.299141 25.800469 17.119141 25.480469C16.949141 25.170469 16.960391 24.780703 17.150391 24.470703L21.199219 18L18 18C17.45 18 17 17.55 17 17C17 16.45 17.45 16 18 16 z M 27.5 19C28.11 19 28.679453 19.169219 29.189453 19.449219C29.369453 19.189219 29.65 19 30 19C30.55 19 31 19.45 31 20L31 25C31 25.55 30.55 26 30 26C29.65 26 29.369453 25.810781 29.189453 25.550781C28.679453 25.830781 28.11 26 27.5 26C25.57 26 24 24.43 24 22.5C24 20.57 25.57 19 27.5 19 z M 38.5 19C40.43 19 42 20.57 42 22.5C42 24.43 40.43 26 38.5 26C36.57 26 35 24.43 35 22.5C35 20.57 36.57 19 38.5 19 z M 27.5 21C27.39625 21 27.29502 21.011309 27.197266 21.03125C27.001758 21.071133 26.819727 21.148164 26.660156 21.255859C26.500586 21.363555 26.363555 21.500586 26.255859 21.660156C26.148164 21.819727 26.071133 22.001758 26.03125 22.197266C26.011309 22.29502 26 22.39625 26 22.5C26 22.60375 26.011309 22.70498 26.03125 22.802734C26.051191 22.900488 26.079297 22.994219 26.117188 23.083984C26.155078 23.17375 26.202012 23.260059 26.255859 23.339844C26.309707 23.419629 26.371641 23.492734 26.439453 23.560547C26.507266 23.628359 26.580371 23.690293 26.660156 23.744141C26.819727 23.851836 27.001758 23.928867 27.197266 23.96875C27.29502 23.988691 27.39625 24 27.5 24C27.60375 24 27.70498 23.988691 27.802734 23.96875C28.487012 23.82916 29 23.22625 29 22.5C29 21.67 28.33 21 27.5 21 z M 38.5 21C38.39625 21 38.29502 21.011309 38.197266 21.03125C38.099512 21.051191 38.005781 21.079297 37.916016 21.117188C37.82625 21.155078 37.739941 21.202012 37.660156 21.255859C37.580371 21.309707 37.507266 21.371641 37.439453 21.439453C37.303828 21.575078 37.192969 21.736484 37.117188 21.916016C37.079297 22.005781 37.051191 22.099512 37.03125 22.197266C37.011309 22.29502 37 22.39625 37 22.5C37 22.60375 37.011309 22.70498 37.03125 22.802734C37.051191 22.900488 37.079297 22.994219 37.117188 23.083984C37.155078 23.17375 37.202012 23.260059 37.255859 23.339844C37.309707 23.419629 37.371641 23.492734 37.439453 23.560547C37.507266 23.628359 37.580371 23.690293 37.660156 23.744141C37.739941 23.797988 37.82625 23.844922 37.916016 23.882812C38.005781 23.920703 38.099512 23.948809 38.197266 23.96875C38.29502 23.988691 38.39625 24 38.5 24C38.60375 24 38.70498 23.988691 38.802734 23.96875C39.487012 23.82916 40 23.22625 40 22.5C40 21.67 39.33 21 38.5 21 z"
+                    />
+                  </svg> -->
+                  <img src="Assets/image/zalo.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <!-- shopee -->
+                <a
+                  href="https://shopee.vn/minhvybeauty"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <path
+                      d="M24 1C19.015304 1 15.187203 5.491076 14.589844 11L5.0605469 11C4.4905469 11 4.0305469 11.480547 4.0605469 12.060547L5.7792969 41.230469C5.8992969 43.350469 7.6495312 45 9.7695312 45L38.230469 45C40.350469 45 42.100703 43.350469 42.220703 41.230469L43.939453 12.060547C43.969453 11.480547 43.509453 11 42.939453 11L33.410156 11C32.812797 5.491076 28.984696 1 24 1 z M 24 4C27.044271 4 29.834574 6.9017187 30.392578 11L17.607422 11C18.165426 6.9017187 20.955729 4 24 4 z M 24.080078 17.009766C27.000078 17.009766 29.300391 18.349922 30.150391 18.919922L30.320312 19.029297C30.540312 19.179297 30.610703 19.480937 30.470703 19.710938L29.460938 21.359375C29.380938 21.469375 29.270625 21.559844 29.140625 21.589844C29.100625 21.589844 29.069297 21.599609 29.029297 21.599609C28.929297 21.599609 28.83 21.569766 28.75 21.509766L28.609375 21.419922C28.419375 21.289922 28.059219 21.079766 27.949219 21.009766C27.219219 20.619766 25.740078 19.960938 24.080078 19.960938C21.780078 19.960938 20.109375 21.169844 20.109375 22.839844C20.109375 24.389844 21.499453 25.070391 24.439453 26.150391C27.479453 27.260391 31.259766 28.639062 31.259766 33.039062C31.259766 36.369063 28.039453 38.990234 23.939453 38.990234C20.459453 38.990234 17.629609 36.919297 16.849609 36.279297L16.730469 36.189453C16.530469 36.019453 16.490625 35.729531 16.640625 35.519531L17.740234 33.890625C17.820234 33.770625 17.949609 33.689922 18.099609 33.669922L18.150391 33.669922C18.280391 33.669922 18.400234 33.720781 18.490234 33.800781L18.619141 33.919922C18.639141 33.939922 21.109453 36.039063 23.939453 36.039062C26.349453 36.039062 28.310547 34.689062 28.310547 33.039062C28.310547 30.929063 26.749922 30.130156 23.419922 28.910156C20.639922 27.890156 17.169922 26.619844 17.169922 22.839844C17.169922 19.519844 20.140078 17.009766 24.080078 17.009766 z"
+                    />
+                  </svg> -->
+                  <img src="Assets/image/shopee2.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <!-- laz -->
+                <a
+                  href="https://lazada.vn/minhvybeauty"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <!-- <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 100 100"
+                  >
+                    <path
+                      d="M25.992188 17.001953C25.605279 17.001953 25.224109 17.108194 24.890625 17.314453L8.4648438 27.421875C7.5534844 27.982137 7 28.976035 7 30.044922L7 59.128906C7 60.190844 7.552998 61.183824 8.4550781 61.744141L48.417969 86.548828C48.749873 86.75509 49.118262 86.888512 49.5 86.953125L49.5 87L50 87L50.5 87L50.5 86.953125C50.881738 86.888512 51.250127 86.75509 51.582031 86.548828L91.544922 61.744141C92.447002 61.183824 92.998047 60.190844 92.998047 59.128906L92.998047 30.042969C92.998047 28.974082 92.444562 27.982137 91.533203 27.421875L75.109375 17.314453C74.777357 17.109101 74.394819 17.001953 74.007812 17.001953C73.617447 17.001953 73.23202 17.111022 72.900391 17.316406L72.898438 17.316406L57.544922 26.847656C55.276867 28.255608 52.667174 28.998047 49.998047 28.998047C47.32892 28.998047 44.72118 28.255608 42.453125 26.847656L27.099609 17.316406C26.766378 17.109573 26.382552 17.001953 25.992188 17.001953 z M 25.992188 19.001953C26.011817 19.001953 26.030152 19.008448 26.044922 19.017578L41.398438 28.546875C43.982382 30.150924 46.957174 30.998047 49.998047 30.998047C53.03892 30.998047 56.015664 30.150924 58.599609 28.546875L73.953125 19.017578C73.973495 19.004958 73.988173 19.001953 74.007812 19.001953C74.028802 19.001953 74.042661 19.005052 74.056641 19.013672L74.058594 19.015625L90.486328 29.125C90.522141 29.147016 90.551166 29.178616 90.583984 29.205078L50 51.429688L9.4160156 29.205078C9.4488802 29.17857 9.4778589 29.147016 9.5136719 29.125L25.941406 19.015625C25.953926 19.007925 25.973098 19.001953 25.992188 19.001953 z M 74.013672 22.949219C73.557725 22.950146 73.103028 23.075242 72.701172 23.324219L67.236328 26.716797 A 0.50005 0.50005 0 1 0 67.763672 27.566406L73.226562 24.175781C73.710851 23.875734 74.320245 23.873693 74.804688 24.171875L84.154297 29.925781 A 0.5002983 0.5002983 0 1 0 84.679688 29.074219L75.328125 23.320312C74.925346 23.072402 74.469619 22.948292 74.013672 22.949219 z M 65.318359 27.996094 A 0.50005 0.50005 0 0 0 65.048828 28.074219L63.4375 29.074219 A 0.50081172 0.50081172 0 0 0 63.964844 29.925781L65.576172 28.925781 A 0.50005 0.50005 0 0 0 65.318359 27.996094 z M 9 30.119141L49.5 52.296875L49.5 84.861328C49.491356 84.856307 49.481172 84.854901 49.472656 84.849609L9.5097656 60.044922C9.1818457 59.841238 9 59.514969 9 59.128906L9 30.119141 z M 90.998047 30.119141L90.998047 59.128906C90.998047 59.514969 90.818154 59.841238 90.490234 60.044922L50.527344 84.849609C50.518828 84.854901 50.508644 84.856307 50.5 84.861328L50.5 52.296875L90.998047 30.119141 z M 12.492188 34.992188 A 0.50005 0.50005 0 0 0 12 35.5L12 56.669922C12 57.533887 12.447481 58.33724 13.181641 58.792969L29.236328 68.757812 A 0.50005 0.50005 0 1 0 29.763672 67.908203L13.708984 57.943359C13.267144 57.669088 13 57.189957 13 56.669922L13 35.5 A 0.50005 0.50005 0 0 0 12.492188 34.992188 z M 36.478516 72.173828 A 0.50005 0.50005 0 0 0 36.236328 73.103516L40.236328 75.585938 A 0.50005 0.50005 0 1 0 40.763672 74.736328L36.763672 72.253906 A 0.50005 0.50005 0 0 0 36.478516 72.173828 z M 43.478516 76.519531 A 0.50005 0.50005 0 0 0 43.236328 77.447266L44.236328 78.068359 A 0.50005 0.50005 0 1 0 44.763672 77.21875L43.763672 76.597656 A 0.50005 0.50005 0 0 0 43.478516 76.519531 z"
+                    />
+                  </svg> -->
+                  <img
+                    src="Assets/image/z4326602739507_8b9cbcec3a9e90c05c96fb7425118705.jpg"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li>
+                <!-- tiktok -->
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                    <path
+                      d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"
+                    />
+                  </svg> -->
+                  <img src="Assets/image/Logo Tiktok.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h1>Phương thức thanh toán</h1>
+            <ul>
+              <li>Visa</li>
+              <li>Tiền mặt</li>
+              <li>Ngân hàng nội địa</li>
+            </ul>
+          </li>
+        </ul>
+      </footer>
     </div>
     <!-- <script type="module" src="./node_modules/@algolia/autocomplete-js/dist/esm/autocomplete.js" ;></script>
     <script type="module" src="./node_modules/algoliasearch/lite.js" ;></script> -->

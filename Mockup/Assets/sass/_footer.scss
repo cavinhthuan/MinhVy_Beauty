@@ -1,0 +1,61 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+footer {
+  min-height: 250px;
+  background-color: $primary;
+  color: $white;
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 11px 60px;
+    font-family: $font-family;
+    @include media(mobile) {
+      flex-direction: column;
+      padding: 11px 20px;
+    }
+    & > li {
+      margin-bottom: 1em;
+      & > h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-family: $font-family;
+        text-transform: capitalize;
+        @include media(mobile) {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+      }
+      & > ul {
+        & > li {
+          margin-bottom: 11px;
+          font-size: 1rem;
+          font-weight: 300;
+          @include media(mobile) {
+            font-size: 0.8rem;
+          }
+          a {
+            color: $white;
+            svg,
+            img {
+              fill: $white;
+              object-fit: cover;
+              height: 40px;
+              // background-color: $white;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              border-radius: 10px; /* future proofing */
+              -khtml-border-radius: 10px; /* for old Konqueror browsers */
+              overflow: hidden;
+              &:hover {
+                scale: 1.1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
