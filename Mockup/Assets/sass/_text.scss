@@ -1,7 +1,7 @@
 @use "variables" as *;
 .text {
   font-family: $font-family;
-  color: $white;
+  // color: $white;
   text-decoration: none;
   &:active {
     color: inherit;
@@ -9,8 +9,75 @@
   &:visited {
     color: inherit;
   }
-  &--center {
+  &.al {
+    text-align: left;
+  }
+  &.ac {
     text-align: center;
+  }
+  &.ar {
+    text-align: right;
+  }
+  &.fs {
+    &12 {
+      font-size: 12px;
+    }
+    &14 {
+      font-size: 14px;
+    }
+    &16 {
+      font-size: 16px;
+    }
+    &18 {
+      font-size: 18px;
+    }
+    &20 {
+      font-size: 20px;
+    }
+    &24 {
+      font-size: 24px;
+    }
+    &40 {
+      font-size: 40px;
+    }
+  }
+  &.tfu {
+    text-transform: uppercase;
+  }
+  &.tfl {
+    text-transform: lowercase;
+  }
+  &.tfuc {
+    text-transform: capitalize;
+  }
+  &.fw {
+    &100 {
+      font-weight: 100;
+    }
+    &200 {
+      font-weight: 200;
+    }
+    &300 {
+      font-weight: 300;
+    }
+    &400 {
+      font-weight: 400;
+    }
+    &500 {
+      font-weight: 500;
+    }
+    &600 {
+      font-weight: 600;
+    }
+    &700 {
+      font-weight: 700;
+    }
+    &800 {
+      font-weight: 800;
+    }
+    &900 {
+      font-weight: 900;
+    }
   }
 }
 

@@ -1,0 +1,140 @@
+@use "sass:math";
+@use "variables" as *;
+%btn-float {
+  position: fixed;
+  bottom: 74px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* font-size: 1em; */
+  text-align: center;
+  display: block;
+  background-image: conic-gradient(
+    from 90deg at bottom right,
+    cyan,
+    rebeccapurple
+  );
+  padding: 11px;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.btn {
+  /* CSS */
+  &.button-22 {
+    align-items: center;
+    appearance: button;
+    background-color: #ff0100;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    font-family: "RM Neue", sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 10px 21px;
+    text-align: center;
+    text-transform: none;
+    transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+      opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+
+    &:active {
+      background-color: #006ae8;
+    }
+
+    &:hover {
+      background-color: #1c84ff;
+    }
+  }
+  /* CSS */
+  &.button-23 {
+    background-color: #ffffff;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+      "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+      transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+
+    &:focus-visible {
+      box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+      transition: box-shadow 0.2s;
+    }
+
+    &:active {
+      background-color: #f7f7f7;
+      border-color: #000000;
+      transform: scale(0.96);
+    }
+
+    &:disabled {
+      border-color: #dddddd;
+      color: #dddddd;
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+}
+
+#zalo-float,
+#call-float {
+  position: fixed;
+  bottom: 74px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* font-size: 1em; */
+  text-align: center;
+  display: block;
+  background: #ed213a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 11px;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+#zalo-float {
+  margin-bottom: 54px;
+  background-image: conic-gradient(
+    from 90deg at bottom right,
+    cyan,
+    rebeccapurple
+  );
+}

@@ -21,15 +21,30 @@ $btn-size: 30px;
   @include media(mobile) {
     display: none;
   }
+  @include media(tablet) {
+    display: none;
+  }
 }
 .slide {
   font-family: $font-family;
   width: 100%;
   position: relative;
   z-index: $layer-1;
-  padding: 11px 0;
-  overflow-y: hidden;
+  // padding: 11px 0;
   margin: 11px 0;
+
+  @include media(mobile) {
+    padding: 0;
+    margin-bottom: 11px;
+  }
+  @include media(tablet) {
+    padding: 0;
+    margin-bottom: 11px;
+  }
+  & &-container {
+    width: 100%;
+  }
+
   & {
     &--next {
       @extend %btn;
@@ -50,23 +65,31 @@ $btn-size: 30px;
       }
     }
   }
-  .swiper-wrapper {
+  & .swiper-wrapper {
     align-items: center;
   }
+  & .swiper-wrapper + .swiper-pagination {
+    & .swiper-pagination-bullet {
+      background-color: $white;
+    }
+  }
+
   .banner {
     &-container {
       display: flex;
       flex-direction: row;
       width: 100%;
       height: 100%;
-      padding: 10px 2 * $btn-size;
-      gap: 10px;
+      // padding: 10px 2 * $btn-size;
+      // gap: 10px;
       justify-content: center;
       align-items: center;
       box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-
       @include media(mobile) {
-        padding: 10px 11px;
+        padding: 0;
+      }
+      @include media(tablet) {
+        padding: 0;
       }
       .message {
         display: flex;
@@ -81,14 +104,19 @@ $btn-size: 30px;
       .media {
         flex: 1 0 calc(50% - 10px);
         img {
-          object-fit: contain;
+          object-fit: cover;
           width: 100%;
         }
         video {
-          object-fit: contain;
+          object-fit: cover;
           width: 100%;
           border-radius: 5px;
         }
+      }
+    }
+    &-pagination {
+      & .swiper-pagination-bullet {
+        background-color: $secondary-lv1;
       }
     }
   }
@@ -98,31 +126,44 @@ $btn-size: 30px;
       gap: 0px 60px;
       align-items: center;
       padding: 10px 100px;
-      height: 374px;
-
+      padding-bottom: 35px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
       @include media(mobile) {
-        padding: 10px 11px;
+        padding: 15px 11px;
+        padding-bottom: 25px;
+        gap: 0px 20px;
+        // height: 174px;
+      }
+      @include media(tablet) {
+        padding: 15px 11px;
         gap: 0px 20px;
         height: 174px;
       }
       .media {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        display: flex;
+        justify-content: center;
+        box-shadow: rgba(212, 25, 187, 0.25) 0px 2px 5px -1px,
           rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
         border-radius: 10px;
         overflow: hidden;
         flex: 1.5 0 math.div(2, 3) * 100%;
-        height: 100%;
-        min-height: 170px;
         position: relative;
+        height: 100%;
+
         img {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          object-fit: fill;
+          object-fit: cover;
           object-position: center;
           width: 100%;
+          min-height: 170px;
+          max-height: 349px;
         }
         @include media(mobile) {
+          flex: 1 0 50%;
+          object-fit: none;
+        }
+        @include media(tablet) {
           flex: 1 0 50%;
         }
       }
@@ -131,16 +172,22 @@ $btn-size: 30px;
         text-transform: capitalize;
         display: flex;
         flex-direction: column;
-        height: 100%;
         flex-grow: 1;
         justify-content: space-between;
+        font-size: 1em;
+        height: 100%;
         .title {
-          font-size: 2.5em;
+          font-size: 200%;
           font-weight: 700;
           text-transform: capitalize;
-          line-height: 60px;
+          line-height: 1em;
           align-self: flex-start;
+
           @include media(mobile) {
+            font-size: 1em;
+            line-height: 1em;
+          }
+          @include media(tablet) {
             font-size: 1em;
             line-height: 1em;
           }
@@ -174,8 +221,75 @@ $btn-size: 30px;
         }
       }
     }
+    &-pagination {
+      & .swiper-pagination-bullet {
+        background-color: $primary !important;
+      }
+    }
+  }
+  &#product-recomments-slide {
+    padding-bottom: 34px;
+  }
+  &-thumb {
+    height: 800px;
+    width: 35%;
+    @include media(mobile) {
+      padding-top: 20px;
+    }
+    & > .main-slide {
+      aspect-ratio: 1/1;
+      // width: 100%;
+      box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(https://assets.imgix.net/unsplash/citystreet.jpg?w=1600&auto=compress)
+          no-repeat center top;
+        background-size: cover;
+        -webkit-filter: blur(15px);
+        -moz-filter: blur(15px);
+        -o-filter: blur(15px);
+        -ms-filter: blur(15px);
+        filter: blur(15px);
+        -webkit-transform: scale(1.2, 1.2);
+        -moz-transform: scale(1.2, 1.2);
+        -o-transform: scale(1.2, 1.2);
+        -ms-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        max-height: min-content;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    & > .thumb-slide {
+      padding: 2px;
+      & .thumb-slide--active {
+        & > img {
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset, rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+          z-index: 2;
+          border-radius: 2px;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 2px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
   }
 }
+// .thumb-slide--active{
+//   border: 2px solid $primary;
+// }
 @keyframes btn-slide--next {
   0% {
     right: -$btn-size;

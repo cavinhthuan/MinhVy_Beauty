@@ -33,15 +33,20 @@
     font-size: 1.5em;
     font-weight: 300;
     margin-bottom: 20px;
+    font-family: $font-family;
     // &:after {
     //   content: "";
     //   height: 1px;
     //   width: 100%;
     //   background-color: #000;
     // }
+    &.center {
+      justify-content: center;
+    }
     strong {
       margin: 0 2vw;
       font-weight: 500;
+      font-family: $font-family;
     }
   }
 }

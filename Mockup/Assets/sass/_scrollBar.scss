@@ -1,0 +1,21 @@
+@mixin scrollbars($size: 6px, $foreground-color: #ccc, $background-color: transparent) {
+    // For Chrome & Safari
+    &::-webkit-scrollbar {
+      width: $size;
+      height: $size;
+      border-radius: $size / 2;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+      border-radius: $size / 2;
+    }
+    &::-webkit-scrollbar-track {
+      background: $background-color;
+    }
+    // Standard version (Firefox only for now)
+    scrollbar-color: $foreground-color $background-color;
+  }
+body{
+    @include scrollbars(8px, #eee);
+}

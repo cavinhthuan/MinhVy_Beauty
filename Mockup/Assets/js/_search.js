@@ -9,7 +9,7 @@ let searchResult = document.querySelector("#search-result");
 export const minisearch = function (documents) {
   let miniSearch = new MiniSearch({
     fields: ["name"], // fields to index for full-text search
-    storeFields: ["name", "thumnal"], // fields to return with search results
+    storeFields: ["name", "thumnal", "page"], // fields to return with search results
   });
   miniSearch.addAll(documents);
   function searchAndDisplay() {
@@ -32,7 +32,7 @@ export const minisearch = function (documents) {
 
       // Tạo các phần tử con cho item
       let img = document.createElement("img");
-      img.src = "Assets/image/" + result.thumnal;
+      img.src = "/Assets/image/" + result.thumnal;
       img.className = "thumnal";
 
       let productName = document.createElement("div");
@@ -41,6 +41,7 @@ export const minisearch = function (documents) {
 
       let navigate = document.createElement("a");
       navigate.href = result.page;
+      console.log(result);
       navigate.className = "navigate";
 
       let icon = document.createElement("i");

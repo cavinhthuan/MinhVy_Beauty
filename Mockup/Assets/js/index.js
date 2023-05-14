@@ -1,126 +1,31 @@
-import { minisearch } from "./_search.js";
-import Cart from "./_cart.js";
-import { products } from "./_data.js";
+import { minisearch } from "/Assets/js/_search.js";
+import Cart from "/Assets/js/_cart.js";
+import { products } from "/Assets/js/_data.js";
 let cart = new Cart();
-
 const searchEngine = minisearch(products);
-//products
-function createProductElement(product) {
-  // Tạo một thẻ div có class là product
-  let productDiv = document.createElement("div");
-  productDiv.className = "product";
 
-  // Tạo một thẻ div có class là product-image và chứa một thẻ img
-  let productImageDiv = document.createElement("div");
-  productImageDiv.className = "product-image";
-  let productImage = document.createElement("img");
-  productImage.src = "Assets/image/" + product.thumnal;
-  productImage.alt = product.name;
-  productImageDiv.appendChild(productImage);
-
-  // Tạo một thẻ div có class là product-name và chứa tên sản phẩm
-  let productNameDiv = document.createElement("div");
-  productNameDiv.className = "product-name";
-  productNameDiv.textContent = product.name;
-
-  // Tạo một thẻ div có class là product-price và chứa giá sản phẩm
-  let productPriceDiv = document.createElement("div");
-  productPriceDiv.className = "product-price";
-  let formatter = new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND",
-  });
-
-  productPriceDiv.textContent = `${formatter
-    .format(product.price)
-    .replace("₫", "")
-    .trimEnd()} `;
-  let currency = document.createElement("u");
-  currency.textContent = "đ";
-  productPriceDiv.appendChild(currency);
-
-  // Tạo một thẻ div có class là btn-addtocart và chứa nút thêm vào giỏ hàng
-  let btnAddtocartDiv = document.createElement("div");
-  btnAddtocartDiv.className = "btn-addtocart";
-  btnAddtocartDiv.textContent = "Chọn Mua";
-  btnAddtocartDiv.setAttribute("data-product-id", product.id);
-  btnAddtocartDiv.addEventListener("click", function () {
-    var productId = this.dataset.productId;
-    cart.addProduct(productId, 1);
-  });
-
-  // Thêm các thẻ div con vào thẻ div cha
-  productDiv.appendChild(productImageDiv);
-  productDiv.appendChild(productNameDiv);
-  productDiv.appendChild(productPriceDiv);
-  productDiv.appendChild(btnAddtocartDiv);
-  // Trả về phần tử HTML của sản phẩm
-  return productDiv;
-}
-// Hàm để thêm các sản phẩm vào các catalog tương ứng
-function appendProductsToCatalogs(products) {
-  // Lấy ra tất cả các phần tử section có class là group-products
-
-  // Duyệt qua mảng các sản phẩm
-  for (let product of products) {
-    // Lấy ra các catalog của sản phẩm và chuyển thành mảng
-    let productCatalogs = product.catalogs.split(",");
-
-    // Duyệt qua mảng các catalog
-    for (let catalog of productCatalogs) {
-      // Tạo một phần tử HTML cho sản phẩm
-      let productElement = createProductElement(product);
-      let catalogElement = document.getElementById(`${catalog}`);
-      let catalogElementParent = catalogElement.parentElement;
-      let section = catalogElementParent.nextElementSibling;
-
-      section.prepend(productElement);
-    }
-  }
-}
-// Gọi hàm để thêm các sản phẩm vào các catalog tương ứng
-function notiGroupProductsEmpty() {
-  // select all the .group-products elements
-  let groups = document.querySelectorAll(".group-products");
-  // loop through each group
-  for (var i = 0; i < groups.length; i++) {
-    // check if it has any .product element inside
-    var hasProduct = groups[i].querySelector(".product") !== null;
-    // if not, add the .group-products-empty class
-    if (!hasProduct) {
-      groups[i].classList.add("group-products-empty");
-    }
-
-    var checkbox = groups[i].querySelector(".view-more > input[type='checkbox']");
-    // add an event listener for the change event
-    checkbox.addEventListener("change", function() {
-      // check if the checkbox is checked
-      if (this.checked) {
-        // add the .show-more class to the group
-        this.closest(".group-products").classList.add("show-more");
-      } else {
-        // remove the .show-more class from the group
-        this.closest(".group-products").classList.remove("show-more");
-      }
-    });
-  }
-}
-
-//
 $(document).ready(function () {
-  appendProductsToCatalogs(products);
-  notiGroupProductsEmpty();
+  // Get the header element
+  let header = document.querySelector("header");
+  let links = document.getElementsByTagName("a");
+  // Get the offset position of the header
+  let sticky = header.offsetTop;
+  let nav = document.getElementById("ham-toggle");
+  let navAfter = document.querySelector("#nav-left");
 
   console.log("loaded");
   // get all link tags
-  let links = document.getElementsByTagName("a");
-  let nav = document.getElementById("ham-toggle");
-  let navAfter = document.querySelector("#nav-left");
-  let productsHtml = document.querySelectorAll(".product");
-  let header = $("header");
-  let sticky = header.offset().top;
-  let groupProducts = document.querySelectorAll(".group-products");
-
+  window.addEventListener("scroll", function () {
+    if ($(this).scrollTop() > sticky) {
+      header.classList.add("sticky");
+      //get header height
+      var headerHeight = header.offsetHeight;
+      $("body").css("padding-top", headerHeight + "px");
+    } else {
+      header.classList.remove("sticky");
+      $("body").css("padding-top", "");
+    }
+  });
   nav.addEventListener("change", function () {
     //get all .drop-down elements
     var items = document.querySelectorAll(".drop-down .drop-down--items");
@@ -128,47 +33,6 @@ $(document).ready(function () {
     for (var i = 0; i < items.length; i++) {
       items[i].style.display = "none";
     }
-  });
-
-  productsHtml.forEach(function (product) {
-    // Lấy vị trí của .product so với cửa sổ xem
-    var rect = product.getBoundingClientRect();
-    // Lấy chiều cao của cửa sổ
-    var height = window.innerHeight;
-    // Nếu .product đi qua điểm cuối của trang mà không có class .scale-up-bl
-    if (rect.top < height) {
-      product.classList.add("scale-up-bl");
-    }
-  });
-  $(window).on("scroll", function () {
-    if ($(this).scrollTop() > sticky) {
-      header.addClass("sticky");
-      //get header height
-      var headerHeight = header.height();
-      $("body").css("padding-top", headerHeight + "px");
-    } else {
-      header.removeClass("sticky");
-      $("body").css("padding-top", "");
-    }
-    // Lặp qua tất cả các .product
-    productsHtml.forEach(function (product) {
-      // Lấy vị trí của .product so với cửa sổ xem
-      var rect = product.getBoundingClientRect();
-      // Lấy chiều cao của cửa sổ
-      var height = window.innerHeight;
-      // Nếu .product đi qua điểm cuối của trang mà không có class .scale-up-bl
-      if (rect.top <= height && !product.classList.contains("scale-up-bl")) {
-        // Thêm class .scale-up-bl cho .product
-        product.classList.add("scale-up-bl");
-      } else if (
-        rect.top > height &&
-        product.classList.contains("scale-up-bl")
-      ) {
-        // Nếu điểm đầu của sản phẩm đã đi qua điểm cuối của trang mà có chứa class .scale-up-bl
-        // Xóa class .scale-up-bl cho .product
-        product.classList.remove("scale-up-bl");
-      }
-    });
   });
 
   // loop through each link

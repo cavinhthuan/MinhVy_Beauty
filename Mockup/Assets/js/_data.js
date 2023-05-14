@@ -110,6 +110,6 @@ export const products = [
     price: "270000",
     thumnal: "Ginkgo biloba 2000 anh cong dung.jpg",
     catalogs: "danhchonguoilontuoi,danhchonam,danhchonu",
-    "page ": "# ",
+    page: "./Pages/products/Viên uống tuần hoàn máu Ginkgo Biloba 2000mg Úc.html",
   },
 ];

@@ -3,7 +3,10 @@ const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
   loop: true,
-
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
   // Navigation arrows
   navigation: {
     nextEl: ".slide--next",

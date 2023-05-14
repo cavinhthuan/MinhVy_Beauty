@@ -11,12 +11,16 @@ footer {
     justify-content: space-between;
     padding: 11px 60px;
     font-family: $font-family;
+    gap: 25px;
     @include media(mobile) {
       flex-direction: column;
       padding: 11px 20px;
     }
+    @include media(tablet) {
+      flex-direction: column;
+      padding: 11px 20px;
+    }
     & > li {
-      margin-bottom: 1em;
       & > h1 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -24,6 +28,10 @@ footer {
         font-family: $font-family;
         text-transform: capitalize;
         @include media(mobile) {
+          font-size: 1rem;
+          font-weight: 700;
+        }
+        @include media(tablet) {
           font-size: 1rem;
           font-weight: 700;
         }
@@ -36,8 +44,13 @@ footer {
           @include media(mobile) {
             font-size: 0.8rem;
           }
+          @include media(tablet) {
+            font-size: 0.8rem;
+          }
           a {
             color: $white;
+            text-decoration: none;
+            font-weight: 300;
             svg,
             img {
               fill: $white;

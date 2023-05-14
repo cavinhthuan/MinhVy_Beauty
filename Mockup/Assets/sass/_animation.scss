@@ -157,3 +157,21 @@
     background-position: 100% 50%;
   }
 }
+
+//text open up to down
+@-webkit-keyframes text-open-ud {
+  0% {
+    height: 250px;
+  }
+  100% {
+    height: 10000px;
+  }
+}
+@keyframes bg-pan-right {
+  0% {
+    height: 250px;
+  }
+  100% {
+    height: 10000px;
+  }
+}
